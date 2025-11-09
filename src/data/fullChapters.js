@@ -576,17 +576,21 @@ That single speech is what separates you from every "drug dealer" they've ever m
         title: "When to Pump the Brakes: The Red Flags 🚨",
         content: `Finally, you tell them about the clients you avoid. This shows you have standards and reinforces your "honest advisor" status. These are the red flags that scream "this client will be a nightmare".
 
-### Red Flag #1: "We need AI agents NOW."
-**Your Diagnosis:** "No you don't. You need to get your grip together. Even in the best workflows, AI agents are used once or twice max. Determinism is the best way to build a workflow".
+**🚨 Red Flag #1: "We need AI agents NOW."**
 
-### Red Flag #2: "I saw this on LinkedIn."
-**Your Diagnosis:** "Scope creep superhero. Red flag incarnate".
+*Your Diagnosis:* "No you don't. You need to get your grip together. Even in the best workflows, AI agents are used once or twice max. Determinism is the best way to build a workflow".
 
-### Red Flag #3: "My competitor has it."
-**Your Diagnosis:** "You're building AI for wrong reasons. Different companies, different heartbeats, different bureaucracy. What works for them won't work for you".
+**🚨 Red Flag #2: "I saw this on LinkedIn."**
 
-### Red Flag #4: "It MUST be cutting-edge."
-**Your Diagnosis:** "Cutting edge = bleeding edge = high risk of bugs, landscape changes, technology shifts. Don't build enterprise-scale on something that came out last week".
+*Your Diagnosis:* "Scope creep superhero. Red flag incarnate".
+
+**🚨 Red Flag #3: "My competitor has it."**
+
+*Your Diagnosis:* "You're building AI for wrong reasons. Different companies, different heartbeats, different bureaucracy. What works for them won't work for you".
+
+**🚨 Red Flag #4: "It MUST be cutting-edge."**
+
+*Your Diagnosis:* "Cutting edge = bleeding edge = high risk of bugs, landscape changes, technology shifts. Don't build enterprise-scale on something that came out last week".
 
 When you see multiple red flags, you "pump the brakes. These clients will be more headache than blessing".
 

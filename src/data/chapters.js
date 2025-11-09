@@ -140,16 +140,28 @@ export const chaptersData = [
     overview: "Develop the intuition to spot problematic clients and situations before they derail your projects and reputation.",
     sections: [
       {
-        title: "Pattern Recognition",
-        content: "Learn to identify the warning signs: budget misalignment, lack of C-suite buy-in, and technical chaos."
+        title: "The Morning After the Call",
+        content: "The chaotic aftermath of discovery calls and the mental framework for turning chaos into clear diagnosis."
       },
       {
-        title: "The Client Archetypes",
-        content: "Understand different client personalities and their implications for project success."
+        title: "The Triage: Pattern-Matching Your Client",
+        content: "Develop a consultant's sixth sense to diagnose clients in 90 seconds using pattern matching."
       },
       {
-        title: "Documentation Strategies",
-        content: "How to properly document discovery calls to protect yourself and clarify scope."
+        title: "The Overwhelmed Director (Scenario B: 21-100 People)",
+        content: "Master the 'land and expand' strategy with mid-size companies using RICE framework prioritization."
+      },
+      {
+        title: "The Enterprise Labyrinth (Scenario C: 100+ People)",
+        content: "Navigate enterprise politics and build quick wins outside their complex system architecture."
+      },
+      {
+        title: "The Prescription: Being the 'Politely Savage' Doctor",
+        content: "Choose the right platform and deliver honest recommendations that build trust through tough love."
+      },
+      {
+        title: "When to Pump the Brakes: The Red Flags",
+        content: "Recognize warning signs and develop backup plans for when clients become nightmares."
       }
     ],
     exercises: [
