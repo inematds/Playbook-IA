@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getChapterProgress, updateChapterProgress } from '../data/chapters';
+import fullChapterContent from '../data/fullChapters';
+import ChapterContent from './ChapterContent';
 
 const ChapterView = ({ chapter, onComplete, onBack }) => {
   const [progress, setProgress] = useState(getChapterProgress(chapter.id));
@@ -287,13 +289,24 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
           </div>
 
           {/* Current Section Content */}
-          <div className="bg-silver-50 rounded-lg p-6">
-            <h4 className="text-lg font-bold text-navy-800 mb-3">
-              {chapter.sections[currentSection].title}
-            </h4>
-            <p className="text-silver-700 leading-relaxed">
-              {chapter.sections[currentSection].content}
-            </p>
+          <div className="bg-white rounded-lg p-8 border border-silver-200">
+            {fullChapterContent[chapter.id] && fullChapterContent[chapter.id].sections[currentSection] ? (
+              <>
+                <h4 className="text-2xl font-bold text-navy-800 mb-6 pb-4 border-b-2 border-navy-200">
+                  {fullChapterContent[chapter.id].sections[currentSection].title}
+                </h4>
+                <ChapterContent content={fullChapterContent[chapter.id].sections[currentSection].content} />
+              </>
+            ) : (
+              <>
+                <h4 className="text-lg font-bold text-navy-800 mb-3">
+                  {chapter.sections[currentSection].title}
+                </h4>
+                <p className="text-silver-700 leading-relaxed">
+                  {chapter.sections[currentSection].content}
+                </p>
+              </>
+            )}
           </div>
 
           {/* Navigation Buttons */}
