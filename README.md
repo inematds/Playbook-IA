@@ -15,7 +15,7 @@
 
 ## URLs
 - **Live Application**: https://3000-ipxioi0x16zdyte00malr-d0b9e1e2.sandbox.novita.ai/
-- **GitHub**: Not yet deployed
+- **GitHub Repository**: https://github.com/Drfiya/Playbook
 
 ## Core Features
 
