@@ -72,6 +72,7 @@ export const chaptersData = [
     icon: "fa-phone",
     color: "from-navy-600 to-navy-400",
     duration: "50 min",
+    videoUrl: "https://www.loom.com/share/cafb8f16cd2540efbf0fd5767a3aefb1",
     keyTakeaways: [
       "The Doctor vs Drug Dealer positioning",
       "Essential discovery questions that diagnose real problems",
