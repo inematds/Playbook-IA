@@ -14,7 +14,7 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
   return (
     <div className="p-8">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-navy-800 to-navy-600 rounded-2xl p-8 text-white mb-8">
+      <div className="bg-gradient-to-r from-navy-800 to-navy-600 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 text-white mb-8 transition-colors">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-4xl font-bold mb-4">Welcome Back!</h2>
@@ -36,7 +36,7 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
           <div className="flex flex-col justify-center">
             <div className="bg-navy-900/30 rounded-lg p-6">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-silver-300">Overall Progress</span>
+                <span className="text-white">Overall Progress</span>
                 <span className="text-2xl font-bold">{progress}%</span>
               </div>
               <div className="progress-bar mb-6">
@@ -47,12 +47,12 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
                 <div className="flex items-center space-x-3">
                   <i className={`fas ${badge.icon} text-2xl ${badge.color}`}></i>
                   <div>
-                    <div className="text-sm text-silver-300">Current Rank</div>
+                    <div className="text-sm text-gray-200">Current Rank</div>
                     <div className="font-semibold">{badge.name}</div>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-sm text-silver-300">Total Points</div>
+                  <div className="text-sm text-gray-200">Total Points</div>
                   <div className="text-2xl font-bold">{points}</div>
                 </div>
               </div>
@@ -66,20 +66,20 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
         <div className="card">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-silver-600 text-sm mb-1">Chapters Completed</p>
-              <p className="text-2xl font-bold text-navy-800">
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-1">Chapters Completed</p>
+              <p className="text-2xl font-bold text-navy-900 dark:text-white">
                 {chapters.filter(ch => getChapterProgress(ch.id).completed).length} / {chapters.length}
               </p>
             </div>
-            <i className="fas fa-book-open text-3xl text-navy-600"></i>
+            <i className="fas fa-book-open text-3xl text-navy-600 dark:text-gray-300"></i>
           </div>
         </div>
 
         <div className="card">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-silver-600 text-sm mb-1">Learning Streak</p>
-              <p className="text-2xl font-bold text-navy-800">7 days</p>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-1">Learning Streak</p>
+              <p className="text-2xl font-bold text-navy-900 dark:text-white">7 days</p>
             </div>
             <i className="fas fa-fire text-3xl text-orange-500"></i>
           </div>
@@ -88,8 +88,8 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
         <div className="card">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-silver-600 text-sm mb-1">Exercises Done</p>
-              <p className="text-2xl font-bold text-navy-800">12</p>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-1">Exercises Done</p>
+              <p className="text-2xl font-bold text-navy-900 dark:text-white">12</p>
             </div>
             <i className="fas fa-tasks text-3xl text-green-500"></i>
           </div>
@@ -98,8 +98,8 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
         <div className="card">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-silver-600 text-sm mb-1">Time Invested</p>
-              <p className="text-2xl font-bold text-navy-800">8.5h</p>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-1">Time Invested</p>
+              <p className="text-2xl font-bold text-navy-900 dark:text-white">8.5h</p>
             </div>
             <i className="fas fa-clock text-3xl text-purple-500"></i>
           </div>
@@ -124,7 +124,7 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
             >
               {!isUnlocked && (
                 <div className="absolute inset-0 bg-silver-900/10 flex items-center justify-center z-10">
-                  <i className="fas fa-lock text-3xl text-silver-600"></i>
+                  <i className="fas fa-lock text-3xl text-gray-500 dark:text-gray-400"></i>
                 </div>
               )}
 
@@ -136,8 +136,8 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
                     <i className={`fas ${chapter.icon}`}></i>
                   </div>
                   <div>
-                    <span className="text-silver-500 text-sm">Chapter {chapter.number}</span>
-                    <h4 className="font-semibold text-navy-800">{chapter.title}</h4>
+                    <span className="text-gray-600 dark:text-gray-400 text-sm">Chapter {chapter.number}</span>
+                    <h4 className="font-semibold text-navy-900 dark:text-white">{chapter.title}</h4>
                   </div>
                 </div>
                 {isCompleted && (
@@ -145,14 +145,14 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
                 )}
               </div>
 
-              <p className="text-silver-600 text-sm mb-4 line-clamp-2">{chapter.subtitle}</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">{chapter.subtitle}</p>
 
               <div className="flex items-center justify-between text-sm">
-                <span className="text-silver-500">
+                <span className="text-gray-600 dark:text-gray-400">
                   <i className="fas fa-clock mr-1"></i>
                   {chapter.duration}
                 </span>
-                <span className="text-silver-500">
+                <span className="text-gray-600 dark:text-gray-400">
                   {chapter.exercises?.length || 0} exercises
                 </span>
               </div>
@@ -181,7 +181,7 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
               <i className="fas fa-trophy text-yellow-500"></i>
               <div className="flex-1">
                 <p className="font-semibold">Completed "The Art of the Discovery Call"</p>
-                <p className="text-sm text-silver-600">2 hours ago</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">2 hours ago</p>
               </div>
               <span className="text-green-500 font-semibold">+150 pts</span>
             </div>
@@ -189,7 +189,7 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
               <i className="fas fa-check-circle text-green-500"></i>
               <div className="flex-1">
                 <p className="font-semibold">Finished Client Readiness Exercise</p>
-                <p className="text-sm text-silver-600">Yesterday</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Yesterday</p>
               </div>
               <span className="text-green-500 font-semibold">+100 pts</span>
             </div>
@@ -197,7 +197,7 @@ const Dashboard = ({ chapters, onChapterSelect, progress, points }) => {
               <i className="fas fa-book text-blue-500"></i>
               <div className="flex-1">
                 <p className="font-semibold">Started Chapter 3: Reading the Room</p>
-                <p className="text-sm text-silver-600">2 days ago</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">2 days ago</p>
               </div>
             </div>
           </div>

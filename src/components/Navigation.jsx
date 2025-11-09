@@ -1,7 +1,10 @@
 import React from 'react';
 import { chaptersData, getChapterProgress, getOverallProgress, getTotalPoints } from '../data/chapters';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Navigation = ({ currentView, onNavigate, onBack, focusMode, onToggleFocus }) => {
+  const { isDark, toggleTheme } = useTheme();
+  
   const handleExportProgress = () => {
     try {
       // Collect all progress data
@@ -48,7 +51,7 @@ const Navigation = ({ currentView, onNavigate, onBack, focusMode, onToggleFocus 
   };
 
   return (
-    <header className="bg-navy-800 text-white sticky top-0 z-50">
+    <header className="bg-navy-800 dark:bg-gray-800 text-white sticky top-0 z-50 transition-colors">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
@@ -70,8 +73,17 @@ const Navigation = ({ currentView, onNavigate, onBack, focusMode, onToggleFocus 
 
           <div className="flex items-center space-x-4">
             <button
+              onClick={toggleTheme}
+              className="px-3 py-1 rounded-lg bg-navy-700 dark:bg-gray-700 hover:bg-navy-600 dark:hover:bg-gray-600 transition-colors flex items-center space-x-2"
+              title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            >
+              <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
+              <span className="text-sm">{isDark ? 'Light' : 'Dark'}</span>
+            </button>
+
+            <button
               onClick={onToggleFocus}
-              className="px-3 py-1 rounded-lg bg-navy-700 hover:bg-navy-600 transition-colors flex items-center space-x-2"
+              className="px-3 py-1 rounded-lg bg-navy-700 dark:bg-gray-700 hover:bg-navy-600 dark:hover:bg-gray-600 transition-colors flex items-center space-x-2"
               title={focusMode ? "Exit Focus Mode" : "Enter Focus Mode"}
             >
               <i className={`fas ${focusMode ? 'fa-expand' : 'fa-compress'}`}></i>
@@ -80,7 +92,7 @@ const Navigation = ({ currentView, onNavigate, onBack, focusMode, onToggleFocus 
 
             <button 
               onClick={handleExportProgress}
-              className="px-3 py-1 rounded-lg bg-navy-700 hover:bg-navy-600 transition-colors"
+              className="px-3 py-1 rounded-lg bg-navy-700 dark:bg-gray-700 hover:bg-navy-600 dark:hover:bg-gray-600 transition-colors"
               title="Export your learning progress as JSON file"
             >
               <i className="fas fa-download mr-2"></i>

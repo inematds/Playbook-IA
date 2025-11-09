@@ -8,13 +8,15 @@ This changelog documents all development changes made to the AI Consulting Playb
 ## 🎯 Current Status (November 9, 2025)
 
 ### ✅ Completed Features:
-- **Full Chapter 1 & 2 Content Integration** with rich formatting
+- **Full Chapter 1-4 Content Integration** with rich formatting
 - **Loom Video Player System** with progress tracking
 - **Resizable Sidebar** with drag-and-drop functionality
 - **Fixed Chapter Completion System** with manual override
 - **Professional Table Rendering** with responsive design
 - **Compact Section Navigation** to eliminate horizontal scrolling
 - **Working Quiz Retake Functionality**
+- **Dark/Light Mode Toggle** with theme persistence
+- **Enhanced Text Readability** across all dashboard elements
 
 ### 📊 Current Chapter Status:
 - **Chapter 1**: Full content (7 sections) + video + quiz ✅
@@ -121,6 +123,66 @@ This changelog documents all development changes made to the AI Consulting Playb
 - Clears `quizAnswers`, `showResults`, and properly sets `showQuiz`
 - Added "Retake Quiz" button in results screen
 - Ensures clean slate for each quiz attempt
+
+---
+
+## 🆕 November 9, 2025 - UI/UX Improvements & Chapter Formatting
+
+### **7. Dark Mode Implementation** (Commits: [pending])
+**What:** Complete light/dark mode toggle with theme persistence
+**Files Changed:**
+- `tailwind.config.js` (enabled dark mode with class strategy)
+- `src/contexts/ThemeContext.jsx` (NEW - theme state management)
+- `src/App.jsx` (ThemeProvider integration, dark mode background)
+- `src/components/Navigation.jsx` (dark mode toggle button, useTheme hook)
+- `src/index.css` (dark mode variants for all component classes)
+- `src/components/Dashboard.jsx` (dark mode text colors)
+
+**Key Features:**
+- **Theme Toggle Button:** Sun/moon icon in top navigation panel
+- **Local Storage Persistence:** User preference saved and remembered across sessions
+- **System Preference Detection:** Automatically detects user's system preference on first visit
+- **Comprehensive Dark Mode Styling:** All UI elements updated with dark variants
+- **Smooth Transitions:** Color transitions between light and dark modes
+
+**Component Updates:**
+- **Navigation Header:** Dark gray background (`dark:bg-gray-800`)
+- **Cards & Buttons:** Dark variants with proper contrast (`dark:bg-gray-800`, `dark:hover:bg-gray-600`)
+- **Sidebar:** Dark background with gray borders (`dark:bg-gray-800`, `dark:border-gray-700`)
+- **Text Elements:** Improved readability in dark mode (`dark:text-white`, `dark:text-gray-300`)
+- **CSS Classes:** Updated `.btn-primary`, `.btn-secondary`, `.card`, `.progress-bar`, `.progress-fill`
+
+### **8. Dashboard Text Brightness Improvements** (Commits: [pending])
+**What:** Enhanced text visibility and readability across all dashboard elements
+**Files Changed:**
+- `src/components/Dashboard.jsx` (comprehensive text color updates)
+
+**Improvements Made:**
+- **Stats Cards:** Changed faded `text-silver-600` to bright `text-gray-700`/`text-gray-300` (dark)
+- **Main Numbers:** Enhanced from `text-navy-800` to `text-navy-900`/`text-white` (dark)
+- **Chapter Cards:** Updated all text elements for better contrast and visibility
+- **Hero Section:** Brightened progress labels to `text-white` and `text-gray-200`
+- **Activity Feed:** Enhanced timestamps and metadata for better readability
+- **Lock Icons:** Improved disabled state text contrast
+
+**Before/After:**
+- **Before:** Faded silver/gray text that was difficult to read
+- **After:** High-contrast, bright text that's easy to see in both light and dark modes
+
+### **9. Chapter Content Formatting Fixes** (Commits: [pending])
+**What:** Fixed numbered list formatting in Chapter 4's "3-Act Rollout" section
+**Files Changed:**
+- `src/data/fullChapters.js` (added proper line breaks between numbered items)
+
+**Issue Fixed:**
+- **Problem:** Numbered list items in Phase 1 and Phase 2 were displaying as continuous text
+- **Solution:** Added blank lines between each numbered item for proper markdown rendering
+- **Result:** Clean, properly formatted numbered lists that display as separate items
+
+**Sections Updated:**
+- **Phase 1: PILOT (30-60 days):** 8 numbered items now display as proper list
+- **Phase 2: SCALE:** 4 numbered items now display as proper list
+- **Phase 3: OPTIMIZE:** Was already formatted correctly
 
 ---
 
@@ -323,7 +385,7 @@ Desktop: 1024px+ (lg)
 ### **Phase 2: Feature Enhancements (Next Sprint)**
 1. **Search functionality** across all chapters
 2. **Export progress** as PDF/JSON
-3. **Dark mode toggle** with theme persistence
+3. **✅ Dark mode toggle** with theme persistence (COMPLETED)
 4. **Enhanced AI Coach** with chapter-specific guidance
 5. **Bookmark system** for important sections
 

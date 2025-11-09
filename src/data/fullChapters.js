@@ -765,12 +765,19 @@ And remember to add the human nuance: **"Don't measure day-by-day... Fridays = l
 This is the controlled test. You must be rigorous.
 
 1. **Select pilot group** (and the advice is perfect: "count on one hand how many people")
+
 2. **Train core users**
+
 3. **Run for 30-60 days**
+
 4. **Collect feedback**
+
 5. **Analyze results**
+
 6. **Document wins in metric format** ("tangible reporting")
+
 7. **Document issues**
+
 8. **Refine processes** (You'll always find surprises, e.g., "assumed people always do X, Y, Z → turns out only 60% of the time")
 
 ## Phase 2: SCALE
@@ -778,8 +785,11 @@ This is the controlled test. You must be rigorous.
 Once the pilot is a documented success, you're clear for takeoff.
 
 1. **Train next cohort** (a "much bigger group")
+
 2. **Deploy to entire department**
+
 3. **Monitor adoption and adherence**
+
 4. **Track metrics from pilot issues**
 
 ## Phase 3: OPTIMIZE (3-6-12 months)

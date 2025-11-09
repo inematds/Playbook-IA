@@ -5,6 +5,7 @@ import ChapterView from './components/ChapterView';
 import ProgressTracker from './components/ProgressTracker';
 import AICoach from './components/AICoach';
 import Navigation from './components/Navigation';
+import { ThemeProvider } from './contexts/ThemeContext';
 import './index.css';
 
 function App() {
@@ -56,20 +57,21 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${focusMode ? 'focus-mode' : ''}`}>
-      <Navigation 
-        currentView={currentView}
-        onNavigate={setCurrentView}
-        onBack={handleBackToDashboard}
-        focusMode={focusMode}
-        onToggleFocus={() => setFocusMode(!focusMode)}
-      />
+    <ThemeProvider>
+      <div className={`min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors ${focusMode ? 'focus-mode' : ''}`}>
+        <Navigation 
+          currentView={currentView}
+          onNavigate={setCurrentView}
+          onBack={handleBackToDashboard}
+          focusMode={focusMode}
+          onToggleFocus={() => setFocusMode(!focusMode)}
+        />
 
       <div className="flex">
         {!focusMode && (
           <div className="relative">
             <aside 
-              className="bg-white border-r border-silver-200 h-screen sticky top-0 overflow-y-auto"
+              className="bg-white dark:bg-gray-800 border-r border-silver-200 dark:border-gray-700 h-screen sticky top-0 overflow-y-auto transition-colors"
               style={{ width: `${sidebarWidth}px` }}
             >
               <ProgressTracker 
@@ -120,7 +122,8 @@ function App() {
           currentChapter={selectedChapter}
         />
       )}
-    </div>
+      </div>
+    </ThemeProvider>
   );
 }
 
