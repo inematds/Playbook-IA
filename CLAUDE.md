@@ -25,13 +25,14 @@ This is **Dr. Lutfiya Miller's AI Consulting Playbook** - an interactive learnin
 ## Architecture Overview
 
 ### Tech Stack
-- **Frontend**: React 19 + TypeScript + Vite 6
-- **Styling**: Tailwind CSS 3.4 with custom theme (navy/silver palette)
-- **State Management**: React hooks + LocalStorage
+- **Frontend**: React 19 + TypeScript/JavaScript (mixed) + Vite 6
+- **Styling**: Tailwind CSS 3.4 with custom theme (navy/silver palette) 
+- **State Management**: React hooks + LocalStorage + Context (ThemeContext)
 - **Backend**: Hono framework (minimal setup)
 - **Deployment**: Cloudflare Pages (wrangler) + PM2 for local hosting
 - **Content**: Markdown-style formatting in JavaScript modules
 - **Build Tools**: Vite with React plugin, PostCSS, Autoprefixer
+- **Video**: Loom integration for chapter videos
 
 ### Core Data Flow
 1. Chapter metadata defined in `src/data/chapters.js` (titles, overviews, exercises, quizzes)
@@ -46,6 +47,9 @@ This is **Dr. Lutfiya Miller's AI Consulting Playbook** - an interactive learnin
 - `ChapterContent.jsx` - Renders markdown-style content with formatting
 - `ProgressTracker.jsx` - Sidebar progress display and chapter navigation
 - `AICoach.jsx` - Contextual AI assistance interface
+- `Navigation.jsx` - Top navigation component
+- `LoomVideoPlayer.jsx` - Embedded Loom video player for chapter videos
+- `ThemeContext.jsx` - Dark/light theme management context
 
 ### Content System
 The app uses a dual-layer content system:
@@ -65,8 +69,8 @@ Content rendering supports:
 The main development focus is migrating content from `/content/*.docx` files into `src/data/fullChapters.js`.
 
 **Current Status**:
-- Chapter 1: ✅ Fully integrated (6 sections)
-- Chapters 2-14: ⏳ Awaiting content extraction
+- Chapter 1: ✅ Fully integrated (6 sections, complete with video)
+- Chapters 2-14: ⏳ Awaiting content extraction from `/content/*.docx` files
 
 **Content Structure**:
 ```javascript
@@ -121,6 +125,7 @@ export const fullChapterContent = {
 ### Content Management
 - All chapter content should be stored in data files, never hardcoded in components
 - Maintain consistency between `chapters.js` metadata and `fullChapters.js` content
+- Each chapter includes Loom video URL in `chapters.js` for embedded video playback
 - Use atomic commits for content updates: "Add chapter X content", "Fix rendering in section Y"
 
 ### Component Patterns
@@ -162,7 +167,7 @@ export const fullChapterContent = {
 ## Future Enhancements
 
 ### Planned Features
-- Dark mode toggle (extend Tailwind config + localStorage persistence)
+- Dark mode toggle (ThemeContext already implemented, needs UI toggle)
 - Search across all chapters
 - Bookmarking system for sections
 - PDF export functionality

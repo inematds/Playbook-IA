@@ -191,6 +191,35 @@ This changelog documents all development changes made to the AI Consulting Playb
 - `src/components/ChapterContent.jsx` (enhanced all text rendering for dark mode)
 - `src/components/ChapterView.jsx` (fixed content containers and section headers)
 
+### **11. Sidebar Progress Tracker Dark Mode Text Improvements** (Commits: [Current])
+**What:** Fixed gray/faded text visibility issues in the left sidebar progress tracker during dark mode
+**Files Changed:**
+- `src/components/ProgressTracker.jsx` (comprehensive dark mode text readability improvements)
+- `CLAUDE.md` (updated architecture documentation and tech stack details)
+
+**Critical Issues Fixed:**
+- **Sidebar Text Visibility:** All progress tracker text now clearly visible in dark mode
+- **Chapter Number Visibility:** Fixed faded chapter numbers (05, 06, 07, 08, 09, 10, 11) for locked chapters
+- **Removed Harsh Opacity:** Eliminated `opacity-50` from locked chapters that made everything unreadable
+- **Enhanced Contrast:** Upgraded text colors from `dark:text-silver-300/400` to `dark:text-silver-100/200`
+- **Improved Hover States:** Added proper dark mode hover styling for interactive elements
+
+**Text Color Enhancements:**
+- **Section Headings:** "Your Progress", "Chapters", "Achievements" → `dark:text-silver-100/white`
+- **Progress Stats:** Overall percentage and stats → `dark:text-silver-300`
+- **Points/Chapter Cards:** Background and text → `dark:bg-silver-800` + `dark:text-white`
+- **Chapter Titles:** Unlocked chapters → `dark:text-silver-100`, Locked chapters → `dark:text-silver-400`
+- **Chapter Numbers:** Inactive/locked numbers → `dark:text-silver-100` (was nearly invisible)
+- **Achievement Badges:** Enhanced contrast for inactive badges → `dark:bg-silver-700` + `dark:text-silver-500`
+- **Achievement Labels:** All achievement text → `dark:text-silver-300`
+- **Section Progress:** "sections read" counters → `dark:text-silver-300`
+
+**User Experience Impact:**
+- **Eliminated Eye Strain:** No more squinting to read faded gray text in dark mode
+- **Maintained Visual Hierarchy:** Locked chapters still appear disabled but remain readable
+- **Accessibility Compliance:** Proper contrast ratios throughout sidebar
+- **Consistent Theme Experience:** All sidebar elements now properly support both light/dark modes
+
 **Critical Issues Fixed:**
 - **Chapter Content Background:** Fixed white background container in chapter content area
 - **Emphasized Text Visibility:** Fixed bold/italic text that was nearly invisible in dark mode
