@@ -439,6 +439,7 @@ export const chaptersData = [
     icon: "fa-clock",
     color: "from-teal-600 to-teal-400",
     duration: "55 min",
+    videoUrl: "https://www.loom.com/share/6c03f2acef6f4a05a732d020033a82e0",
     keyTakeaways: [
       "Creating client-ready workshops in under an hour",
       "The systematic approach to rapid content creation",
