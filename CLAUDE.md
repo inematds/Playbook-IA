@@ -207,6 +207,7 @@ export const fullChapterContent = {
 ---
 
 **Repository**: https://github.com/Drfiya/Playbook  
+**Live Application**: https://3000-ipxioi0x16zdyte00malr-d0b9e1e2.sandbox.novita.ai/  
 **Maintainer**: Dr. Lutfiya Miller, Ph.D., DABT  
 **Framework**: React 19 + Vite 6 + Tailwind CSS 3.4  
 **Last Updated**: November 2025  

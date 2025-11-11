@@ -509,6 +509,7 @@ export const chaptersData = [
     icon: "fa-shield",
     color: "from-red-700 to-red-500",
     duration: "50 min",
+    videoUrl: "https://www.loom.com/share/ca4b1379754847ada35316929620895e",
     keyTakeaways: [
       "Navigating the overwhelming AI landscape",
       "Becoming the calm in the client's storm",
@@ -539,6 +540,7 @@ export const chaptersData = [
     icon: "fa-magnet",
     color: "from-purple-700 to-purple-500",
     duration: "55 min",
+    videoUrl: "https://www.loom.com/share/447a4bc56af34e2585e601c5251806f6",
     keyTakeaways: [
       "Building an inbound client system",
       "Content strategy for introverts",
@@ -569,6 +571,7 @@ export const chaptersData = [
     icon: "fa-chalkboard-teacher",
     color: "from-green-700 to-green-500",
     duration: "60 min",
+    videoUrl: "https://www.loom.com/share/9c99092606974ebfaa6dba9f45e90657",
     keyTakeaways: [
       "Transforming from presenter to facilitator",
       "The Pre-Flight Checklist system",
