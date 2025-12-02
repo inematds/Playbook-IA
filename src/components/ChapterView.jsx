@@ -9,14 +9,14 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
   const getCleanProgress = () => {
     const storedProgress = getChapterProgress(chapter.id);
     const actualSections = fullChapterContent[chapter.id]?.sections || chapter.sections;
-    
+
     // If we have fullChapterContent sections, filter out any invalid section titles from progress
     if (fullChapterContent[chapter.id]?.sections && storedProgress.sectionsRead?.length > 0) {
       const validSectionTitles = actualSections.map(section => section.title);
-      const filteredSectionsRead = storedProgress.sectionsRead.filter(title => 
+      const filteredSectionsRead = storedProgress.sectionsRead.filter(title =>
         validSectionTitles.includes(title)
       );
-      
+
       // If the filtered list is different, update the stored progress
       if (filteredSectionsRead.length !== storedProgress.sectionsRead.length) {
         const cleanedProgress = {
@@ -27,7 +27,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
         return cleanedProgress;
       }
     }
-    
+
     return storedProgress;
   };
 
@@ -50,7 +50,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
     // Use the actual sections being displayed (from fullChapterContent if available, otherwise fallback to chapter.sections)
     const actualSections = fullChapterContent[chapter.id]?.sections || chapter.sections;
     const sectionTitle = actualSections[sectionIndex]?.title;
-    
+
     if (sectionTitle && !progress.sectionsRead.includes(sectionTitle)) {
       const newProgress = {
         ...progress,
@@ -131,7 +131,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
         <div className="card">
           <h2 className="text-2xl font-bold text-navy-800 mb-6">
             <i className="fas fa-brain mr-3"></i>
-            Chapter {chapter.number} Quiz
+            Quiz do Capítulo {chapter.number}
           </h2>
 
           {!showResults ? (
@@ -161,22 +161,22 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
                 disabled={Object.keys(quizAnswers).length !== chapter.quiz?.length}
                 className="btn-primary w-full"
               >
-                Submit Quiz
+                Enviar Quiz
               </button>
             </>
           ) : (
             <div className="text-center py-8">
               <i className={`fas ${progress.quizScore >= 80 ? 'fa-trophy text-yellow-500' : 'fa-redo text-blue-500'} text-5xl mb-4`}></i>
               <h3 className="text-2xl font-bold mb-2">
-                {progress.quizScore >= 80 ? 'Excellent Work!' : 'Keep Learning!'}
+                {progress.quizScore >= 80 ? 'Excelente Trabalho!' : 'Continue Aprendendo!'}
               </h3>
-              <p className="text-lg mb-6">Your Score: {progress.quizScore}%</p>
-              
+              <p className="text-lg mb-6">Sua Pontuação: {progress.quizScore}%</p>
+
               {chapter.quiz?.map((question, index) => (
                 <div key={index} className="mb-4 p-4 bg-silver-50 rounded-lg text-left">
                   <p className="font-semibold">{question.question}</p>
                   <p className={quizAnswers[index] === question.correct ? 'text-green-600' : 'text-red-600'}>
-                    Your answer: {question.options[quizAnswers[index]]}
+                    Sua resposta: {question.options[quizAnswers[index]]}
                   </p>
                   {quizAnswers[index] !== question.correct && (
                     <p className="text-sm text-silver-600 dark:text-gray-400 mt-1">{question.explanation}</p>
@@ -187,11 +187,11 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
               <div className="flex space-x-4">
                 <button onClick={startQuiz} className="btn-primary flex-1">
                   <i className="fas fa-redo mr-2"></i>
-                  Retake Quiz
+                  Refazer Quiz
                 </button>
                 <button onClick={() => setShowQuiz(false)} className="btn-secondary flex-1">
                   <i className="fas fa-arrow-left mr-2"></i>
-                  Back to Chapter
+                  Voltar ao Capítulo
                 </button>
               </div>
             </div>
@@ -209,38 +209,38 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
             <i className="fas fa-pencil-alt mr-3"></i>
             {selectedExercise.title}
           </h2>
-          
+
           <div className="mb-6">
             <p className="text-silver-600 dark:text-gray-300 mb-4">{selectedExercise.description}</p>
-            
+
             <div className="bg-silver-50 dark:bg-gray-800 rounded-lg p-4 mb-4">
-              <p className="text-sm text-silver-600 dark:text-gray-400 mb-2">Exercise Type: {selectedExercise.type}</p>
-              <p className="text-sm text-silver-600 dark:text-gray-400">Points: {selectedExercise.points}</p>
+              <p className="text-sm text-silver-600 dark:text-gray-400 mb-2">Tipo de Exercício: {selectedExercise.type}</p>
+              <p className="text-sm text-silver-600 dark:text-gray-400">Pontos: {selectedExercise.points}</p>
             </div>
 
             {selectedExercise.type === 'writing' && (
               <textarea
                 className="w-full h-48 p-4 border border-silver-300 rounded-lg"
-                placeholder="Write your response here..."
+                placeholder="Escreva sua resposta aqui..."
               ></textarea>
             )}
 
             {selectedExercise.type === 'assessment' && (
               <div className="space-y-4">
                 <div className="p-4 bg-white border border-silver-200 rounded-lg">
-                  <h4 className="font-semibold mb-2">Fictional Client: TechCorp Solutions</h4>
+                  <h4 className="font-semibold mb-2">Cliente Fictício: TechCorp Solutions</h4>
                   <p className="text-sm text-silver-600">
-                    - Processes: Some documented, mostly ad-hoc
-                    <br />- Data: Siloed across 5 systems
-                    <br />- Buy-in: CTO interested, CEO skeptical
-                    <br />- Systems: Basic Zapier automations
+                    - Processos: Alguns documentados, maioria ad-hoc
+                    <br />- Dados: Isolados em 5 sistemas
+                    <br />- Adesão: CTO interessado, CEO cético
+                    <br />- Sistemas: Automações básicas com Zapier
                   </p>
                 </div>
                 <select className="w-full p-3 border border-silver-300 rounded-lg">
-                  <option>Select your recommendation...</option>
-                  <option>Tier 1: Ready for Implementation</option>
-                  <option>Tier 2: Needs Preparation</option>
-                  <option>Tier 3: Requires Education</option>
+                  <option>Selecione sua recomendação...</option>
+                  <option>Nível 1: Pronto para Implementação</option>
+                  <option>Nível 2: Precisa de Preparação</option>
+                  <option>Nível 3: Requer Educação</option>
                 </select>
               </div>
             )}
@@ -250,7 +250,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
                 onClick={() => completeExercise(selectedExercise.title)}
                 className="btn-primary flex-1"
               >
-                Complete Exercise
+                Completar Exercício
               </button>
               <button
                 onClick={() => {
@@ -259,7 +259,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
                 }}
                 className="btn-secondary flex-1"
               >
-                Cancel
+                Cancelar
               </button>
             </div>
           </div>
@@ -274,7 +274,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
         {/* Chapter Header */}
         <div className={`bg-gradient-to-r ${chapter.color} rounded-2xl p-8 text-white mb-8`}>
           <div className="flex items-center justify-between mb-4">
-            <span className="text-silver-200">Chapter {chapter.number}</span>
+            <span className="text-silver-200">Capítulo {chapter.number}</span>
             <span className="text-silver-200">
               <i className="fas fa-clock mr-2"></i>
               {chapter.duration}
@@ -288,7 +288,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
         <div className="card mb-8">
           <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-4">
             <i className="fas fa-key mr-2"></i>
-            Key Takeaways
+            Principais Aprendizados
           </h3>
           <ul className="space-y-2">
             {chapter.keyTakeaways.map((takeaway, index) => (
@@ -302,7 +302,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
 
         {/* Overview */}
         <div className="card mb-8">
-          <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-4">Overview</h3>
+          <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-4">Visão Geral</h3>
           <p className="text-silver-700 dark:text-gray-300 leading-relaxed">{chapter.overview}</p>
         </div>
 
@@ -311,11 +311,11 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
           <div className="card mb-8">
             <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-6">
               <i className="fas fa-video mr-2"></i>
-              Chapter Walkthrough
+              Vídeo do Capítulo
             </h3>
-            <LoomVideoPlayer 
+            <LoomVideoPlayer
               videoUrl={chapter.videoUrl}
-              title={`Chapter ${chapter.number}: ${chapter.title}`}
+              title={`Capítulo ${chapter.number}: ${chapter.title}`}
               onVideoWatched={() => {
                 const newProgress = {
                   ...progress,
@@ -330,8 +330,8 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
 
         {/* Sections */}
         <div className="card mb-8">
-          <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-6">Chapter Content</h3>
-          
+          <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-6">Conteúdo do Capítulo</h3>
+
           {/* Section Navigation */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-6">
             {(fullChapterContent[chapter.id]?.sections || chapter.sections).map((section, index) => (
@@ -393,7 +393,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
               className="btn-secondary disabled:opacity-50"
             >
               <i className="fas fa-arrow-left mr-2"></i>
-              Previous
+              Anterior
             </button>
             <button
               onClick={() => {
@@ -406,7 +406,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
               disabled={currentSection === (fullChapterContent[chapter.id]?.sections || chapter.sections).length - 1}
               className="btn-primary disabled:opacity-50"
             >
-              Next
+              Próximo
               <i className="fas fa-arrow-right ml-2"></i>
             </button>
           </div>
@@ -417,7 +417,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
           <div className="card mb-8">
             <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-6">
               <i className="fas fa-tasks mr-2"></i>
-              Exercises
+              Exercícios
             </h3>
             <div className="grid gap-4">
               {chapter.exercises.map((exercise, index) => (
@@ -458,14 +458,14 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
         <div className="card mb-8">
           <h3 className="text-xl font-bold text-navy-800 dark:text-white mb-4">
             <i className="fas fa-sticky-note mr-2"></i>
-            Your Notes
+            Suas Anotações
           </h3>
           <textarea
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             onBlur={saveNotes}
             className="w-full h-32 p-4 border border-silver-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
-            placeholder="Take notes here..."
+            placeholder="Faça anotações aqui..."
           ></textarea>
         </div>
 
@@ -474,7 +474,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
           <div className="card mb-8 bg-gradient-to-r from-purple-50 to-indigo-50 border-purple-200">
             <h3 className="text-xl font-bold text-purple-800 mb-4">
               <i className="fas fa-lightbulb mr-2"></i>
-              Reflection
+              Reflexão
             </h3>
             <p className="text-purple-700">{chapter.reflection}</p>
           </div>
@@ -484,9 +484,9 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
         <div className="card mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-600 border-blue-200 dark:border-gray-600">
           <h3 className="text-xl font-bold text-blue-800 dark:text-white mb-4">
             <i className="fas fa-tasks mr-2"></i>
-            Chapter Progress
+            Progresso do Capítulo
           </h3>
-          
+
           <div className="space-y-3">
             {/* Video Progress */}
             {chapter.videoUrl && (
@@ -495,7 +495,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
                   <i className={`fas fa-video mr-3 ${
                     progress.videoWatched ? 'text-green-500' : 'text-silver-400 dark:text-gray-500'
                   }`}></i>
-                  <span className="font-medium text-gray-900 dark:text-gray-200">Watch Chapter Video</span>
+                  <span className="font-medium text-gray-900 dark:text-gray-200">Assistir Vídeo do Capítulo</span>
                 </div>
                 <div className="flex items-center">
                   {progress.videoWatched ? (
@@ -513,7 +513,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
                 <i className={`fas fa-book-open mr-3 ${
                   progress.sectionsRead.length === (fullChapterContent[chapter.id]?.sections || chapter.sections).length ? 'text-green-500' : 'text-silver-400 dark:text-gray-500'
                 }`}></i>
-                <span className="font-medium text-gray-900 dark:text-gray-200">Read All Sections</span>
+                <span className="font-medium text-gray-900 dark:text-gray-200">Ler Todas as Seções</span>
               </div>
               <div className="flex items-center">
                 <span className="text-sm text-silver-600 dark:text-gray-400 mr-3">
@@ -534,7 +534,7 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
                   <i className={`fas fa-pencil-alt mr-3 ${
                     (progress.exercisesCompleted?.length || 0) >= 1 ? 'text-green-500' : 'text-silver-400 dark:text-gray-500'
                   }`}></i>
-                  <span className="font-medium text-gray-900 dark:text-gray-200">Complete Exercises</span>
+                  <span className="font-medium text-gray-900 dark:text-gray-200">Completar Exercícios</span>
                 </div>
                 <div className="flex items-center">
                   <span className="text-sm text-silver-600 dark:text-gray-400 mr-3">
@@ -556,11 +556,11 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
                   <i className={`fas fa-brain mr-3 ${
                     progress.quizScore >= 80 ? 'text-green-500' : 'text-silver-400 dark:text-gray-500'
                   }`}></i>
-                  <span className="font-medium text-gray-900 dark:text-gray-200">Pass Quiz (80% or higher)</span>
+                  <span className="font-medium text-gray-900 dark:text-gray-200">Passar no Quiz (80% ou mais)</span>
                 </div>
                 <div className="flex items-center">
                   <span className="text-sm text-silver-600 dark:text-gray-400 mr-3">
-                    {progress.quizScore > 0 ? `${progress.quizScore}%` : 'Not taken'}
+                    {progress.quizScore > 0 ? `${progress.quizScore}%` : 'Não realizado'}
                   </span>
                   {progress.quizScore >= 80 ? (
                     <i className="fas fa-check-circle text-green-500"></i>
@@ -578,27 +578,27 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
           {chapter.quiz && progress.sectionsRead.length === (fullChapterContent[chapter.id]?.sections || chapter.sections).length && !progress.completed && (
             <button onClick={startQuiz} className="btn-primary flex-1">
               <i className="fas fa-brain mr-2"></i>
-              {progress.quizScore > 0 ? `Retake Quiz (${progress.quizScore}%)` : 'Take Quiz'}
+              {progress.quizScore > 0 ? `Refazer Quiz (${progress.quizScore}%)` : 'Fazer Quiz'}
             </button>
           )}
-          
+
           {!progress.completed && progress.sectionsRead.length === (fullChapterContent[chapter.id]?.sections || chapter.sections).length && (
             <button onClick={handleCompleteChapter} className="btn-primary flex-1">
               <i className="fas fa-flag-checkered mr-2"></i>
-              Mark Chapter Complete
+              Marcar Capítulo como Completo
             </button>
           )}
-          
+
           {progress.completed && (
             <div className="flex-1 text-center p-4 bg-green-100 rounded-lg text-green-700 font-semibold">
               <i className="fas fa-trophy mr-2"></i>
-              Chapter Completed! 🎉
+              Capítulo Completado!
             </div>
           )}
-          
+
           <button onClick={onBack} className="btn-secondary">
             <i className="fas fa-arrow-left mr-2"></i>
-            Back to Dashboard
+            Voltar ao Painel
           </button>
         </div>
       </div>
@@ -606,11 +606,11 @@ const ChapterView = ({ chapter, onComplete, onBack }) => {
       {/* Highlighted Text Tooltip */}
       {highlightedText && (
         <div className="fixed bottom-4 right-4 bg-navy-800 text-white p-4 rounded-lg max-w-md shadow-xl">
-          <p className="text-sm mb-2">Selected text:</p>
+          <p className="text-sm mb-2">Texto selecionado:</p>
           <p className="italic">"{highlightedText.substring(0, 100)}..."</p>
           <p className="text-xs mt-2 text-silver-300">
             <i className="fas fa-info-circle mr-1"></i>
-            Context and related concepts would appear here
+            Contexto e conceitos relacionados apareceriam aqui
           </p>
         </div>
       )}

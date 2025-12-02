@@ -5,7 +5,7 @@ const ChapterContent = ({ content }) => {
   const renderContent = (text) => {
     // Split by paragraphs
     const paragraphs = text.split('\n\n');
-    
+
     return paragraphs.map((para, index) => {
       // Handle headers
       if (para.startsWith('###')) {
@@ -16,7 +16,7 @@ const ChapterContent = ({ content }) => {
           </h3>
         );
       }
-      
+
       if (para.startsWith('##')) {
         const headerText = para.replace(/^##\s*/, '').trim();
         return (
@@ -25,12 +25,12 @@ const ChapterContent = ({ content }) => {
           </h2>
         );
       }
-      
+
       // Handle horizontal rules
       if (para.trim() === '---') {
         return <hr key={index} className="my-8 border-silver-300 dark:border-gray-600" />;
       }
-      
+
       // Handle blockquotes/callouts (lines starting with *")
       if (para.startsWith('*"') || para.trim().startsWith('**')) {
         return (
@@ -41,7 +41,7 @@ const ChapterContent = ({ content }) => {
           </div>
         );
       }
-      
+
       // Handle bullet points
       if (para.trim().startsWith('- ') || para.trim().startsWith('* ')) {
         const items = para.split('\n').filter(line => line.trim().startsWith('- ') || line.trim().startsWith('* '));
@@ -56,7 +56,7 @@ const ChapterContent = ({ content }) => {
           </ul>
         );
       }
-      
+
       // Handle checkboxes
       if (para.includes('- [ ]')) {
         const items = para.split('\n').filter(line => line.includes('- [ ]'));
@@ -71,22 +71,22 @@ const ChapterContent = ({ content }) => {
           </div>
         );
       }
-      
+
       // Handle tables (lines starting with |)
       if (para.includes('|') && para.split('\n').some(line => line.trim().startsWith('|'))) {
         const lines = para.split('\n').filter(line => line.trim());
         const tableRows = lines.filter(line => line.trim().startsWith('|') && !line.includes('---'));
-        
+
         if (tableRows.length > 0) {
           const headerRow = tableRows[0];
           const dataRows = tableRows.slice(1);
-          
+
           // Parse header
           const headers = headerRow.split('|')
             .map(cell => cell.trim())
             .filter(cell => cell)
             .map(cell => cell.replace(/^\*\*|\*\*$/g, ''));
-          
+
           return (
             <div key={index} className="my-8 overflow-x-auto">
               <table className="w-full border-collapse bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden">
@@ -104,7 +104,7 @@ const ChapterContent = ({ content }) => {
                     const cells = row.split('|')
                       .map(cell => cell.trim())
                       .filter(cell => cell);
-                    
+
                     return (
                       <tr key={rowIndex} className={`${rowIndex % 2 === 0 ? 'bg-silver-50 dark:bg-gray-800' : 'bg-white dark:bg-gray-900'} hover:bg-navy-50 dark:hover:bg-gray-700 transition-colors`}>
                         {cells.map((cell, cellIndex) => (
@@ -132,7 +132,7 @@ const ChapterContent = ({ content }) => {
           </div>
         );
       }
-      
+
       // Regular paragraphs
       if (para.trim()) {
         return (
@@ -141,21 +141,21 @@ const ChapterContent = ({ content }) => {
           </p>
         );
       }
-      
+
       return null;
     }).filter(Boolean);
   };
-  
+
   // Handle inline formatting (bold, italic, code)
   const renderInlineFormatting = (text) => {
     const parts = [];
     let currentIndex = 0;
     let key = 0;
-    
+
     // Pattern to match **bold**, *italic*, `code`, and "quotes"
     const pattern = /(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|"[^"]+"|←)/g;
     let match;
-    
+
     while ((match = pattern.exec(text)) !== null) {
       // Add text before match
       if (match.index > currentIndex) {
@@ -165,9 +165,9 @@ const ChapterContent = ({ content }) => {
           </span>
         );
       }
-      
+
       const matched = match[0];
-      
+
       // Handle bold
       if (matched.startsWith('**') && matched.endsWith('**')) {
         parts.push(
@@ -211,10 +211,10 @@ const ChapterContent = ({ content }) => {
       else {
         parts.push(<span key={`other-${key++}`}>{matched}</span>);
       }
-      
+
       currentIndex = match.index + matched.length;
     }
-    
+
     // Add remaining text
     if (currentIndex < text.length) {
       parts.push(
@@ -223,10 +223,10 @@ const ChapterContent = ({ content }) => {
         </span>
       );
     }
-    
+
     return parts.length > 0 ? parts : text;
   };
-  
+
   return (
     <div className="prose prose-lg max-w-none">
       {renderContent(content)}

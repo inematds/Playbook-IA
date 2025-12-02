@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = null }) => {
+const LoomVideoPlayer = ({ videoUrl, title = "Vídeo do Capítulo", onVideoWatched = null }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasWatched, setHasWatched] = useState(false);
   const [showPlayer, setShowPlayer] = useState(false);
@@ -9,7 +9,7 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
   // Convert Loom share URL to embed URL
   const getEmbedUrl = (url) => {
     if (!url) return null;
-    
+
     // Extract video ID from Loom share URL
     const match = url.match(/loom\.com\/share\/([a-zA-Z0-9]+)/);
     if (match) {
@@ -38,10 +38,10 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
   useEffect(() => {
     const handleMessage = (event) => {
       if (event.origin !== 'https://www.loom.com') return;
-      
+
       try {
         const data = event.data;
-        
+
         // Handle player.js events from Loom
         if (data && data.context === 'player.js') {
           // When iframe is ready, add event listeners
@@ -55,7 +55,7 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
                 value: 'ended',
                 context: 'player.js'
               }, '*');
-              
+
               // Add timeupdate event listener for progress tracking
               iframe.contentWindow.postMessage({
                 method: 'addEventListener',
@@ -64,7 +64,7 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
               }, '*');
             }
           }
-          
+
           // Handle video ended
           if (data.event === 'ended') {
             console.log('Video ended - marking as watched');
@@ -73,7 +73,7 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
               onVideoWatched();
             }
           }
-          
+
           // Handle time updates for progress tracking (simplified)
           if (data.event === 'timeupdate') {
             // For now, we'll rely primarily on the 'ended' event
@@ -94,7 +94,7 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
     return (
       <div className="bg-silver-100 rounded-lg p-8 text-center">
         <i className="fas fa-exclamation-triangle text-silver-400 text-3xl mb-4"></i>
-        <p className="text-silver-600">Video URL not available</p>
+        <p className="text-silver-600">URL do vídeo não disponível</p>
       </div>
     );
   }
@@ -111,7 +111,7 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
           {hasWatched && (
             <div className="flex items-center text-green-600">
               <i className="fas fa-check-circle mr-2"></i>
-              <span className="text-sm font-medium">Watched</span>
+              <span className="text-sm font-medium">Assistido</span>
             </div>
           )}
         </div>
@@ -127,8 +127,8 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
               <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-opacity-30 transition-all">
                 <i className="fas fa-play text-white text-2xl ml-1"></i>
               </div>
-              <p className="text-white text-lg font-medium mb-2">Watch Chapter Video</p>
-              <p className="text-silver-200 text-sm">Click to start learning</p>
+              <p className="text-white text-lg font-medium mb-2">Assistir Vídeo do Capítulo</p>
+              <p className="text-silver-200 text-sm">Clique para começar a aprender</p>
             </div>
           </div>
         ) : (
@@ -147,12 +147,12 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
               title={title}
               onLoad={() => setIsLoaded(true)}
             />
-            
+
             {!isLoaded && (
               <div className="absolute inset-0 bg-silver-100 flex items-center justify-center">
                 <div className="text-center">
                   <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-navy-600 mb-4"></div>
-                  <p className="text-silver-600">Loading video...</p>
+                  <p className="text-silver-600">Carregando vídeo...</p>
                 </div>
               </div>
             )}
@@ -165,23 +165,23 @@ const LoomVideoPlayer = ({ videoUrl, title = "Chapter Video", onVideoWatched = n
         <div className="flex items-center justify-between text-sm">
           <div className="flex items-center text-silver-600">
             <i className="fas fa-info-circle mr-2"></i>
-            <span>{showPlayer ? "Use fullscreen for best experience" : "Click to play the chapter walkthrough"}</span>
+            <span>{showPlayer ? "Use tela cheia para melhor experiência" : "Clique para reproduzir o vídeo do capítulo"}</span>
           </div>
-          
+
           {showPlayer && !hasWatched && (
             <button
               onClick={handleMarkAsWatched}
               className="px-3 py-1 bg-navy-600 text-white rounded-md hover:bg-navy-700 transition-colors text-xs font-medium"
             >
               <i className="fas fa-check mr-1"></i>
-              Mark as Watched
+              Marcar como Assistido
             </button>
           )}
-          
+
           {hasWatched && (
             <div className="flex items-center text-green-600 font-medium">
               <i className="fas fa-check-circle mr-1"></i>
-              Completed
+              Concluído
             </div>
           )}
         </div>

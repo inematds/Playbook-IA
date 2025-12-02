@@ -5,41 +5,41 @@ const AICoach = ({ isVisible, onToggle, currentChapter }) => {
   const [conversation, setConversation] = useState([
     {
       role: 'coach',
-      message: "👋 Hi! I'm your AI Coach. I'm here to help you master the AI Consulting Playbook. Ask me anything about the concepts, exercises, or how to apply what you're learning!"
+      message: "👋 Olá! Sou seu Coach de IA. Estou aqui para ajudá-lo a dominar o Playbook de Consultoria em IA. Pergunte-me qualquer coisa sobre os conceitos, exercícios ou como aplicar o que você está aprendendo!"
     }
   ]);
 
   const coachResponses = {
     greeting: [
-      "Great to see you making progress! What would you like to explore today?",
-      "Hello! Ready to level up your consulting skills?",
-      "Welcome back! What questions can I help you with?"
+      "Ótimo ver você progredindo! O que gostaria de explorar hoje?",
+      "Olá! Pronto para elevar suas habilidades de consultoria?",
+      "Bem-vindo de volta! Com quais perguntas posso ajudá-lo?"
     ],
     encouragement: [
-      "You're doing great! Keep up the momentum.",
-      "Excellent progress! Each chapter builds on the last.",
-      "Remember: The real learning happens when you apply these concepts with actual clients."
+      "Você está indo muito bem! Continue com esse ritmo.",
+      "Excelente progresso! Cada capítulo se constrói sobre o anterior.",
+      "Lembre-se: o verdadeiro aprendizado acontece quando você aplica esses conceitos com clientes reais."
     ],
     tips: [
-      "Pro tip: Focus on understanding the 'why' behind each framework, not just memorizing the steps.",
-      "Try applying what you learn immediately - even in small ways with current clients.",
-      "The most successful consultants are those who adapt these frameworks to their unique style."
+      "Dica profissional: Foque em entender o 'porquê' por trás de cada framework, não apenas em memorizar os passos.",
+      "Tente aplicar o que você aprende imediatamente - mesmo de pequenas formas com clientes atuais.",
+      "Os consultores mais bem-sucedidos são aqueles que adaptam esses frameworks ao seu estilo único."
     ],
     chapterSpecific: {
-      1: "The key to Chapter 1 is understanding that saying 'no' builds more trust than saying 'yes' to everything.",
-      2: "In discovery calls, remember: diagnose before you prescribe. Be the doctor, not the drug dealer.",
-      3: "Red flags aren't just warnings - they're opportunities to qualify out bad clients before they waste your time.",
-      4: "Value-based pricing starts with understanding the client's business impact, not your time investment.",
-      5: "Recording your calls is uncomfortable at first, but it's the fastest way to improve your communication.",
-      6: "The $20k audit works because it provides immediate value while positioning you as the expert.",
-      7: "Technical skills get you in the door, but communication skills keep you in the room.",
-      8: "The Chinese Menu technique gives clients control while maintaining your premium positioning.",
-      9: "Every 'failed' engagement is tuition for your education. Extract the lesson and move forward.",
-      10: "Speed comes from systems. Build your templates and frameworks once, use them forever.",
-      11: "Understanding ML fundamentals sets you apart from 90% of 'AI consultants' who only know ChatGPT.",
-      12: "Become the calm in your client's storm. They're drowning in AI hype - be their life raft.",
-      13: "Introverts can excel at consulting by building systems that attract clients instead of chasing them.",
-      14: "Great workshops aren't about information transfer - they're about transformation and engagement."
+      1: "A chave do Capítulo 1 é entender que dizer 'não' constrói mais confiança do que dizer 'sim' para tudo.",
+      2: "Nas chamadas de descoberta, lembre-se: diagnostique antes de prescrever. Seja o médico, não o traficante.",
+      3: "Sinais de alerta não são apenas avisos - são oportunidades para qualificar maus clientes antes que desperdicem seu tempo.",
+      4: "O preço baseado em valor começa com a compreensão do impacto no negócio do cliente, não do seu investimento de tempo.",
+      5: "Gravar suas chamadas é desconfortável no início, mas é a maneira mais rápida de melhorar sua comunicação.",
+      6: "A auditoria de $20k funciona porque fornece valor imediato enquanto o posiciona como especialista.",
+      7: "Habilidades técnicas abrem a porta, mas habilidades de comunicação mantêm você na sala.",
+      8: "A técnica do Menu Chinês dá aos clientes controle enquanto mantém seu posicionamento premium.",
+      9: "Cada engajamento 'fracassado' é mensalidade para sua educação. Extraia a lição e siga em frente.",
+      10: "Velocidade vem de sistemas. Construa seus templates e frameworks uma vez, use-os para sempre.",
+      11: "Compreender os fundamentos de ML diferencia você de 90% dos 'consultores de IA' que só conhecem ChatGPT.",
+      12: "Torne-se a calma na tempestade do seu cliente. Eles estão se afogando no hype da IA - seja sua boia salva-vidas.",
+      13: "Introvertidos podem se destacar em consultoria construindo sistemas que atraem clientes em vez de persegui-los.",
+      14: "Ótimos workshops não são sobre transferência de informação - são sobre transformação e engajamento."
     }
   };
 
@@ -55,18 +55,18 @@ const AICoach = ({ isVisible, onToggle, currentChapter }) => {
 
     // Simple keyword-based responses
     const lowerMessage = message.toLowerCase();
-    
-    if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+
+    if (lowerMessage.includes('olá') || lowerMessage.includes('oi') || lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
       coachReply = getRandomResponse(coachResponses.greeting);
-    } else if (lowerMessage.includes('help') || lowerMessage.includes('stuck')) {
-      coachReply = "I see you're looking for help. What specific concept or exercise are you struggling with? Remember, confusion is just clarity waiting to happen.";
-    } else if (lowerMessage.includes('exercise') || lowerMessage.includes('practice')) {
-      coachReply = "Great question about exercises! The best approach is to complete them immediately after reading each section. Try to relate each exercise to a real client situation you've faced.";
-    } else if (lowerMessage.includes('client') || lowerMessage.includes('discovery')) {
-      coachReply = "Client interactions are where theory meets reality. Focus on asking 'why' questions and listening more than you speak. The 80/20 rule applies: they should talk 80% of the time.";
-    } else if (lowerMessage.includes('pricing') || lowerMessage.includes('money')) {
-      coachReply = "Pricing is about value, not time. Calculate the business impact of your solution, then price at 10-20% of that value. Never compete on price - compete on expertise.";
-    } else if (currentChapter && lowerMessage.includes('chapter')) {
+    } else if (lowerMessage.includes('ajuda') || lowerMessage.includes('help') || lowerMessage.includes('preso') || lowerMessage.includes('stuck')) {
+      coachReply = "Vejo que você está procurando ajuda. Com qual conceito ou exercício específico você está tendo dificuldades? Lembre-se, confusão é apenas clareza esperando para acontecer.";
+    } else if (lowerMessage.includes('exercício') || lowerMessage.includes('exercise') || lowerMessage.includes('prática') || lowerMessage.includes('practice')) {
+      coachReply = "Ótima pergunta sobre exercícios! A melhor abordagem é completá-los imediatamente após ler cada seção. Tente relacionar cada exercício a uma situação real de cliente que você enfrentou.";
+    } else if (lowerMessage.includes('cliente') || lowerMessage.includes('client') || lowerMessage.includes('descoberta') || lowerMessage.includes('discovery')) {
+      coachReply = "Interações com clientes são onde teoria encontra realidade. Foque em fazer perguntas 'por quê' e ouvir mais do que falar. A regra 80/20 se aplica: eles devem falar 80% do tempo.";
+    } else if (lowerMessage.includes('preço') || lowerMessage.includes('pricing') || lowerMessage.includes('dinheiro') || lowerMessage.includes('money')) {
+      coachReply = "Precificação é sobre valor, não tempo. Calcule o impacto no negócio da sua solução, depois precifique entre 10-20% desse valor. Nunca compita por preço - compita por expertise.";
+    } else if (currentChapter && (lowerMessage.includes('capítulo') || lowerMessage.includes('chapter'))) {
       coachReply = coachResponses.chapterSpecific[currentChapter.id] || getRandomResponse(coachResponses.tips);
     } else {
       coachReply = getRandomResponse([...coachResponses.encouragement, ...coachResponses.tips]);
@@ -101,8 +101,8 @@ const AICoach = ({ isVisible, onToggle, currentChapter }) => {
               <i className="fas fa-robot"></i>
             </div>
             <div>
-              <h3 className="font-semibold">AI Coach</h3>
-              <p className="text-xs text-silver-300">Always here to help</p>
+              <h3 className="font-semibold">Coach de IA</h3>
+              <p className="text-xs text-silver-300">Sempre aqui para ajudar</p>
             </div>
           </div>
           <button onClick={onToggle} className="text-white/80 hover:text-white">
@@ -135,22 +135,22 @@ const AICoach = ({ isVisible, onToggle, currentChapter }) => {
       <div className="px-4 py-2 border-t border-silver-200">
         <div className="flex flex-wrap gap-2 mb-3">
           <button
-            onClick={() => setMessage("What should I focus on in this chapter?")}
+            onClick={() => setMessage("Em que devo focar neste capítulo?")}
             className="text-xs px-3 py-1 bg-silver-100 rounded-full hover:bg-silver-200"
           >
-            Chapter Tips
+            Dicas do Capítulo
           </button>
           <button
-            onClick={() => setMessage("How do I apply this in real life?")}
+            onClick={() => setMessage("Como aplico isso na vida real?")}
             className="text-xs px-3 py-1 bg-silver-100 rounded-full hover:bg-silver-200"
           >
-            Practical Application
+            Aplicação Prática
           </button>
           <button
-            onClick={() => setMessage("I'm feeling stuck")}
+            onClick={() => setMessage("Estou me sentindo travado")}
             className="text-xs px-3 py-1 bg-silver-100 rounded-full hover:bg-silver-200"
           >
-            Get Unstuck
+            Sair do Bloqueio
           </button>
         </div>
       </div>
@@ -163,7 +163,7 @@ const AICoach = ({ isVisible, onToggle, currentChapter }) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-            placeholder="Ask me anything..."
+            placeholder="Pergunte-me qualquer coisa..."
             className="flex-1 px-3 py-2 border border-silver-300 rounded-lg text-sm"
           />
           <button
