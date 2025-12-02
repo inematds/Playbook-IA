@@ -1,174 +1,174 @@
-// AI Consulting Playbook Chapter Data
+// Dados dos Capítulos do Playbook de Consultoria em IA
 export const chaptersData = [
   {
     id: 1,
     number: "01",
-    title: "Why Most AI Consultants Will Fail",
-    subtitle: "And How You Can Win",
+    title: "Por Que a Maioria dos Consultores de IA Vai Falhar",
+    subtitle: "E Como Você Pode Vencer",
     icon: "fa-compass",
     color: "from-navy-700 to-navy-500",
     duration: "45 min",
     videoUrl: "https://www.loom.com/share/b44905d90bee4eea9194a5da81e38a11",
     keyTakeaways: [
-      "The $30,000 Misunderstanding - Why saying 'no' builds trust",
-      "AI is a luxury, not a right - The positioning that wins",
-      "The 4-Point Readiness Assessment framework",
-      "The Three-Tier Strategy: Education, Prep, Implementation"
+      "O Mal-Entendido de $30.000 - Por que dizer 'não' constrói confiança",
+      "IA é um luxo, não um direito - O posicionamento que vence",
+      "O framework de Avaliação de Prontidão em 4 Pontos",
+      "A Estratégia de Três Níveis: Educação, Preparação, Implementação"
     ],
-    overview: "Master the foundation of premium AI consulting by understanding why most consultants fail and how to position yourself as an honest advisor rather than a hype peddler.",
+    overview: "Domine a fundação da consultoria premium em IA entendendo por que a maioria dos consultores falha e como se posicionar como um conselheiro honesto em vez de um vendedor de hype.",
     sections: [
       {
-        title: "The Opening Hook",
-        content: "Learn the power of refusing money to build trust and why the premium consultant gives clients what they need, not what they want."
+        title: "O Gancho de Abertura",
+        content: "Aprenda o poder de recusar dinheiro para construir confiança e por que o consultor premium dá aos clientes o que eles precisam, não o que eles querem."
       },
       {
-        title: "Core Positioning Shift",
-        content: "Understand why 'AI is a luxury, not a right' and how this provocative stance filters out bad clients while attracting premium ones."
+        title: "Mudança de Posicionamento Central",
+        content: "Entenda por que 'IA é um luxo, não um direito' e como esta postura provocativa filtra clientes ruins enquanto atrai clientes premium."
       },
       {
-        title: "The Litmus Test",
-        content: "Master the 4-point Readiness Assessment: Processes, Data, Buy-in, and Systems. Learn to diagnose whether clients have earned the right to use AI."
+        title: "O Teste Decisivo",
+        content: "Domine a Avaliação de Prontidão em 4 pontos: Processos, Dados, Adesão e Sistemas. Aprenda a diagnosticar se os clientes conquistaram o direito de usar IA."
       },
       {
-        title: "Three-Tier Framework",
-        content: "Structure your offers into Education (Tier 3), Prep (Tier 2), and Implementation (Tier 1). Discover why Tier 2 is where the real money lies."
+        title: "Framework de Três Níveis",
+        content: "Estruture suas ofertas em Educação (Nível 3), Preparação (Nível 2) e Implementação (Nível 1). Descubra por que o Nível 2 é onde está o dinheiro real."
       }
     ],
     exercises: [
       {
         type: "assessment",
-        title: "Client Readiness Checker",
-        description: "Practice evaluating a fictional client using the 4-point framework",
+        title: "Verificador de Prontidão do Cliente",
+        description: "Pratique avaliar um cliente fictício usando o framework de 4 pontos",
         points: 100
       },
       {
         type: "writing",
-        title: "Craft Your Positioning Statement",
-        description: "Write your own provocative positioning that filters clients",
+        title: "Crie Sua Declaração de Posicionamento",
+        description: "Escreva seu próprio posicionamento provocativo que filtra clientes",
         points: 150
       }
     ],
     quiz: [
       {
-        question: "What percentage of the market is actually ready for AI implementation (Tier 1)?",
+        question: "Qual porcentagem do mercado está realmente pronta para implementação de IA (Nível 1)?",
         options: ["90%", "50%", "10%", "25%"],
         correct: 2,
-        explanation: "Only about 10% of companies pass all 4 readiness checkpoints and are truly ready for AI implementation."
+        explanation: "Apenas cerca de 10% das empresas passam nos 4 pontos de verificação de prontidão e estão verdadeiramente prontas para implementação de IA."
       },
       {
-        question: "Which tier typically generates the most sustainable revenue?",
-        options: ["Tier 1 (Implementation)", "Tier 2 (Prep)", "Tier 3 (Education)", "All equally"],
+        question: "Qual nível tipicamente gera a receita mais sustentável?",
+        options: ["Nível 1 (Implementação)", "Nível 2 (Preparação)", "Nível 3 (Educação)", "Todos igualmente"],
         correct: 1,
-        explanation: "Tier 2 (Prep) work - fixing foundations, organizing data, documenting processes - creates long-term value and sustainable revenue."
+        explanation: "O trabalho de Nível 2 (Preparação) - corrigir fundações, organizar dados, documentar processos - cria valor a longo prazo e receita sustentável."
       }
     ],
-    reflection: "Think about a time you said 'yes' when you should have said 'no' to a client. What would you do differently using this framework?"
+    reflection: "Pense em uma ocasião em que você disse 'sim' quando deveria ter dito 'não' a um cliente. O que você faria diferente usando este framework?"
   },
   {
     id: 2,
     number: "02",
-    title: "The Art of the Discovery Call",
-    subtitle: "Be the Doctor, Not the Drug Dealer",
+    title: "A Arte da Chamada de Descoberta",
+    subtitle: "Seja o Médico, Não o Traficante",
     icon: "fa-phone",
     color: "from-navy-600 to-navy-400",
     duration: "50 min",
     videoUrl: "https://www.loom.com/share/cafb8f16cd2540efbf0fd5767a3aefb1",
     keyTakeaways: [
-      "The Doctor vs Drug Dealer positioning",
-      "Essential discovery questions that diagnose real problems",
-      "How to handle the 'show me the magic' request",
-      "Converting discovery into trust and authority"
+      "O posicionamento de Médico vs Traficante",
+      "Perguntas essenciais de descoberta que diagnosticam problemas reais",
+      "Como lidar com o pedido 'me mostre a mágica'",
+      "Convertendo descoberta em confiança e autoridade"
     ],
-    overview: "Transform your discovery calls from product demos into diagnostic sessions that position you as a trusted advisor and filter out problematic clients.",
+    overview: "Transforme suas chamadas de descoberta de demos de produto em sessões diagnósticas que posicionam você como um conselheiro confiável e filtram clientes problemáticos.",
     sections: [
       {
-        title: "The Fundamental Choice",
-        content: "Learn why being the 'AI Drug Dealer' who pushes solutions leads to failure, while being the 'Doctor' who diagnoses problems leads to premium engagements."
+        title: "A Escolha Fundamental",
+        content: "Aprenda por que ser o 'Traficante de IA' que empurra soluções leva ao fracasso, enquanto ser o 'Médico' que diagnostica problemas leva a engajamentos premium."
       },
       {
-        title: "Discovery Framework",
-        content: "Master the systematic approach to uncovering real business problems, not just surface-level AI wishes."
+        title: "Framework de Descoberta",
+        content: "Domine a abordagem sistemática para descobrir problemas reais de negócio, não apenas desejos superficiais de IA."
       },
       {
-        title: "Handling Objections",
-        content: "Scripts and techniques for addressing skepticism, budget concerns, and the dreaded 'just show me what AI can do' request."
+        title: "Lidando com Objeções",
+        content: "Scripts e técnicas para abordar ceticismo, preocupações com orçamento e o temido pedido 'apenas me mostre o que a IA pode fazer'."
       },
       {
-        title: "Trust Building",
-        content: "Convert a discovery call into immediate trust through strategic vulnerability and honest assessment."
+        title: "Construindo Confiança",
+        content: "Converta uma chamada de descoberta em confiança imediata através de vulnerabilidade estratégica e avaliação honesta."
       }
     ],
     exercises: [
       {
         type: "roleplay",
-        title: "Discovery Call Simulation",
-        description: "Practice running a discovery call with an AI-simulated client",
+        title: "Simulação de Chamada de Descoberta",
+        description: "Pratique conduzir uma chamada de descoberta com um cliente simulado por IA",
         points: 200
       },
       {
         type: "template",
-        title: "Build Your Discovery Template",
-        description: "Create your personalized discovery call question bank",
+        title: "Construa Seu Template de Descoberta",
+        description: "Crie seu banco de perguntas personalizado para chamadas de descoberta",
         points: 100
       }
     ],
     quiz: [
       {
-        question: "What's the first thing you should do when a client says 'Show me the AI magic'?",
-        options: ["Demo your best tools", "Ask about their budget", "Diagnose their readiness", "Schedule another call"],
+        question: "Qual é a primeira coisa que você deve fazer quando um cliente diz 'Me mostre a mágica da IA'?",
+        options: ["Demonstrar suas melhores ferramentas", "Perguntar sobre o orçamento", "Diagnosticar a prontidão", "Agendar outra chamada"],
         correct: 2,
-        explanation: "Always diagnose before demonstrating. Understanding their readiness prevents wasted demos and failed projects."
+        explanation: "Sempre diagnostique antes de demonstrar. Entender a prontidão deles previne demos desperdiçadas e projetos fracassados."
       }
     ],
-    reflection: "How can you shift from selling features to diagnosing problems in your next client interaction?"
+    reflection: "Como você pode mudar de vender recursos para diagnosticar problemas na sua próxima interação com cliente?"
   },
   {
     id: 3,
     number: "03",
-    title: "Reading the Room & Red Flags",
-    subtitle: "The Morning After the Call",
+    title: "Lendo o Ambiente e Sinais de Alerta",
+    subtitle: "A Manhã Depois da Chamada",
     icon: "fa-flag",
     color: "from-red-600 to-red-400",
     duration: "40 min",
     videoUrl: "https://www.loom.com/share/4f7231640af94846aff7fa2aecb59eea",
     keyTakeaways: [
-      "Identifying the 'Trojan Horse' client",
-      "Red flags that predict project failure",
-      "The 'Spaghetti Back-End' problem",
-      "When to walk away from money"
+      "Identificando o cliente 'Cavalo de Troia'",
+      "Sinais de alerta que predizem falha de projeto",
+      "O problema do 'Back-End Espaguete'",
+      "Quando se afastar do dinheiro"
     ],
-    overview: "Develop the intuition to spot problematic clients and situations before they derail your projects and reputation.",
+    overview: "Desenvolva a intuição para identificar clientes e situações problemáticas antes que eles descarrilem seus projetos e reputação.",
     sections: [
       {
-        title: "The Morning After the Call",
-        content: "The chaotic aftermath of discovery calls and the mental framework for turning chaos into clear diagnosis."
+        title: "A Manhã Depois da Chamada",
+        content: "As consequências caóticas das chamadas de descoberta e o framework mental para transformar caos em diagnóstico claro."
       },
       {
-        title: "The Triage: Pattern-Matching Your Client",
-        content: "Develop a consultant's sixth sense to diagnose clients in 90 seconds using pattern matching."
+        title: "A Triagem: Reconhecimento de Padrões no Cliente",
+        content: "Desenvolva o sexto sentido de consultor para diagnosticar clientes em 90 segundos usando reconhecimento de padrões."
       },
       {
-        title: "The Overwhelmed Director (Scenario B: 21-100 People)",
-        content: "Master the 'land and expand' strategy with mid-size companies using RICE framework prioritization."
+        title: "O Diretor Sobrecarregado (Cenário B: 21-100 Pessoas)",
+        content: "Domine a estratégia 'entrar e expandir' com empresas de médio porte usando priorização com framework RICE."
       },
       {
-        title: "The Enterprise Labyrinth (Scenario C: 100+ People)",
-        content: "Navigate enterprise politics and build quick wins outside their complex system architecture."
+        title: "O Labirinto Corporativo (Cenário C: 100+ Pessoas)",
+        content: "Navegue a política corporativa e construa vitórias rápidas fora de sua arquitetura de sistema complexa."
       },
       {
-        title: "The Prescription: Being the 'Politely Savage' Doctor",
-        content: "Choose the right platform and deliver honest recommendations that build trust through tough love."
+        title: "A Prescrição: Sendo o Médico 'Educadamente Implacável'",
+        content: "Escolha a plataforma certa e entregue recomendações honestas que constroem confiança através de amor duro."
       },
       {
-        title: "When to Pump the Brakes: The Red Flags",
-        content: "Recognize warning signs and develop backup plans for when clients become nightmares."
+        title: "Quando Pisar no Freio: Os Sinais de Alerta",
+        content: "Reconheça sinais de aviso e desenvolva planos de backup para quando clientes se tornam pesadelos."
       }
     ],
     exercises: [
       {
         type: "analysis",
-        title: "Red Flag Detector",
-        description: "Analyze real client scenarios and identify the warning signs",
+        title: "Detector de Sinais de Alerta",
+        description: "Analise cenários reais de clientes e identifique os sinais de alerta",
         points: 150
       }
     ]
@@ -176,50 +176,50 @@ export const chaptersData = [
   {
     id: 4,
     number: "04",
-    title: "Solution Design & Pricing That Scales",
-    subtitle: "From Chaos to Calm",
+    title: "Design de Soluções e Precificação Escalável",
+    subtitle: "Do Caos à Calma",
     icon: "fa-dollar-sign",
     color: "from-green-600 to-green-400",
     duration: "55 min",
     videoUrl: "https://www.loom.com/share/663789411f214ff685fb51a0c3a17e03",
     keyTakeaways: [
-      "Becoming the 'calm in the storm' for overwhelmed clients",
-      "Value-based pricing vs hourly billing",
-      "The partner vs vendor positioning",
-      "Scaling through productization"
+      "Tornando-se a 'calma na tempestade' para clientes sobrecarregados",
+      "Precificação baseada em valor vs cobrança por hora",
+      "O posicionamento de parceiro vs fornecedor",
+      "Escalando através de produtização"
     ],
-    overview: "Design solutions that address real business problems and price them for value, not time.",
+    overview: "Projete soluções que abordam problemas reais de negócio e as precifique pelo valor, não pelo tempo.",
     sections: [
       {
-        title: "From Chaos to Calm: The Confidence Principle",
-        content: "Position yourself as the calm in the storm through systematic processes that reduce client anxiety."
+        title: "Do Caos à Calma: O Princípio da Confiança",
+        content: "Posicione-se como a calma na tempestade através de processos sistemáticos que reduzem a ansiedade do cliente."
       },
       {
-        title: "The Murder Mystery Framework: Diagnosing the Current State",
-        content: "Investigate inefficiencies using four forensic worksheets to map tools, knowledge sources, processes, and stakeholders."
+        title: "O Framework Mistério de Assassinato: Diagnosticando o Estado Atual",
+        content: "Investigue ineficiências usando quatro planilhas forenses para mapear ferramentas, fontes de conhecimento, processos e stakeholders."
       },
       {
-        title: "Making It Tangible: The Baseline Assessment That Proves Your Value",
-        content: "Establish measurable before/after metrics using KPI frameworks to demonstrate concrete value."
+        title: "Tornando Tangível: A Avaliação de Baseline Que Prova Seu Valor",
+        content: "Estabeleça métricas mensuráveis de antes/depois usando frameworks de KPI para demonstrar valor concreto."
       },
       {
-        title: "The 3-Act Rollout: From Pilot to Optimization",
-        content: "Execute systematic implementation through Pilot, Scale, and Optimize phases for long-term success."
+        title: "A Implantação em 3 Atos: Do Piloto à Otimização",
+        content: "Execute implementação sistemática através das fases Piloto, Escala e Otimização para sucesso a longo prazo."
       },
       {
-        title: "The Centralized Strategy: Finding the First Domino",
-        content: "Prioritize revenue-adjacent projects for maximum impact and political capital building."
+        title: "A Estratégia Centralizada: Encontrando o Primeiro Dominó",
+        content: "Priorize projetos adjacentes à receita para máximo impacto e construção de capital político."
       },
       {
-        title: "The Ecosystem: A Pricing Strategy That Scales",
-        content: "Build a tiered engagement ladder from community access to enterprise partnerships that captures every client type."
+        title: "O Ecossistema: Uma Estratégia de Precificação Que Escala",
+        content: "Construa uma escada de engajamento em camadas desde acesso à comunidade até parcerias corporativas que captura cada tipo de cliente."
       }
     ],
     exercises: [
       {
         type: "calculator",
-        title: "Value Pricing Calculator",
-        description: "Calculate the true value of your solutions",
+        title: "Calculadora de Precificação por Valor",
+        description: "Calcule o valor real de suas soluções",
         points: 100
       }
     ]
@@ -227,50 +227,50 @@ export const chaptersData = [
   {
     id: 5,
     number: "05",
-    title: "The Call Autopsy Protocol",
-    subtitle: "Your Unblinking Mirror",
+    title: "O Protocolo de Autópsia da Chamada",
+    subtitle: "Seu Espelho Incansável",
     icon: "fa-microscope",
     color: "from-purple-600 to-purple-400",
     duration: "45 min",
     videoUrl: "https://www.loom.com/share/88f1c1679f38445c8305c25c8c335462",
     keyTakeaways: [
-      "Why human feedback triggers defensive reactions",
-      "The 'Arya' AI Protocol for unbiased call analysis", 
-      "The Six Dimensions of Executive Presence scorecard",
-      "Systematic improvement: from 47 fillers to 'articulate'"
+      "Por que feedback humano desencadeia reações defensivas",
+      "O Protocolo de IA 'Arya' para análise imparcial de chamadas",
+      "O scorecard das Seis Dimensões de Presença Executiva",
+      "Melhoria sistemática: de 47 vícios de linguagem a 'articulado'"
     ],
-    overview: "Master the systematic use of AI to dissect your calls and eliminate weaknesses through unbiased, ego-bypassing feedback.",
+    overview: "Domine o uso sistemático de IA para dissecar suas chamadas e eliminar fraquezas através de feedback imparcial que contorna o ego.",
     sections: [
       {
-        title: "Why You Can't Trust a Human (Not Even Yourself)",
-        content: "The psychology of biased self-evaluation and why human feedback triggers defensive reactions that prevent improvement."
+        title: "Por Que Você Não Pode Confiar em um Humano (Nem em Você Mesmo)",
+        content: "A psicologia da autoavaliação enviesada e por que feedback humano desencadeia reações defensivas que previnem melhoria."
       },
       {
-        title: "The 'Arya' Protocol: An Unblinking Mirror",
-        content: "Step-by-step process for using AI to analyze your calls, including exact prompts and technical setup."
+        title: "O Protocolo 'Arya': Um Espelho Incansável",
+        content: "Processo passo a passo para usar IA para analisar suas chamadas, incluindo prompts exatos e configuração técnica."
       },
       {
-        title: "The Six Dimensions of Executive Presence",
-        content: "Complete scorecard framework analyzing clarity, vocal delivery, authority, body language, questioning skills, and client engagement."
+        title: "As Seis Dimensões de Presença Executiva",
+        content: "Framework completo de scorecard analisando clareza, entrega vocal, autoridade, linguagem corporal, habilidades de questionamento e engajamento do cliente."
       },
       {
-        title: "Anatomy of an Autopsy (A Case Study)",
-        content: "Real-world example of AI call analysis showing the 'Fire Hose' problem, filler words, and skewed talk ratios."
+        title: "Anatomia de uma Autópsia (Um Estudo de Caso)",
+        content: "Exemplo do mundo real de análise de chamada por IA mostrando o problema da 'Mangueira de Incêndio', vícios de linguagem e proporções distorcidas de fala."
       },
       {
-        title: "The AI-Human Synergy Loop",
-        content: "How to combine AI observations with human context and strategy, plus reading client body language through AI analysis."
+        title: "O Loop de Sinergia IA-Humano",
+        content: "Como combinar observações de IA com contexto e estratégia humanos, além de ler linguagem corporal do cliente através de análise de IA."
       },
       {
-        title: "The Compounding Effect: From 47 Fillers to 'Articulate'",
-        content: "Building a systematic improvement loop that transforms weaknesses into perceived strengths through small, compound fixes."
+        title: "O Efeito Cumulativo: De 47 Vícios de Linguagem a 'Articulado'",
+        content: "Construindo um loop de melhoria sistemática que transforma fraquezas em forças percebidas através de correções pequenas e compostas."
       }
     ],
     exercises: [
       {
         type: "review",
-        title: "Call Analysis Practice",
-        description: "Review a sample call and identify improvement opportunities",
+        title: "Prática de Análise de Chamada",
+        description: "Revise uma chamada de exemplo e identifique oportunidades de melhoria",
         points: 150
       }
     ]
@@ -278,54 +278,54 @@ export const chaptersData = [
   {
     id: 6,
     number: "06",
-    title: "The $20,000 X-Ray",
-    subtitle: "Building the Audit Automation",
+    title: "O Raio-X de $20.000",
+    subtitle: "Construindo a Automação de Auditoria",
     icon: "fa-x-ray",
     color: "from-blue-600 to-blue-400",
     duration: "60 min",
     videoUrl: "https://www.loom.com/share/b5d8cce59e834fd39f742a8d9362909e",
     keyTakeaways: [
-      "Why the $20,000 'X-Ray' flips the entire sales dynamic",
-      "Expert's Trap vs. Architect's Asset business models",
-      "Building the 4-component audit automation system",
-      "The 'Black Box' approach to intellectual property protection"
+      "Por que o 'Raio-X' de $20.000 vira toda a dinâmica de vendas",
+      "Modelos de negócio: Armadilha do Especialista vs Ativo do Arquiteto",
+      "Construindo o sistema de automação de auditoria de 4 componentes",
+      "A abordagem 'Caixa Preta' para proteção de propriedade intelectual"
     ],
-    overview: "Build the $20,000 Audit Automation - a scalable system that converts skeptical prospects into high-paying clients by proving problems with their own data.",
+    overview: "Construa a Automação de Auditoria de $20.000 - um sistema escalável que converte prospects céticos em clientes de alto valor provando problemas com os próprios dados deles.",
     sections: [
       {
-        title: "The $20,000 Question",
-        content: "The pivotal moment that transforms consultants from vendors into architects, and how to position the audit as a strategic diagnostic tool."
+        title: "A Pergunta de $20.000",
+        content: "O momento crucial que transforma consultores de fornecedores em arquitetos, e como posicionar a auditoria como uma ferramenta diagnóstica estratégica."
       },
       {
-        title: "The 'Expert's Trap' vs. The 'Architect's Asset'",
-        content: "Understanding the fundamental difference between trading time for money and building scalable systems that manufacture authority."
+        title: "A 'Armadilha do Especialista' vs. O 'Ativo do Arquiteto'",
+        content: "Entendendo a diferença fundamental entre trocar tempo por dinheiro e construir sistemas escaláveis que manufaturam autoridade."
       },
       {
-        title: "The Anatomy of Your $20K 'X-Ray'",
-        content: "The four crucial components: Specific Problem (Niche), Inputs (Data Feed), Engine (Secret Sauce), and Output (Aha! Moment)."
+        title: "A Anatomia do Seu 'Raio-X' de $20K",
+        content: "Os quatro componentes cruciais: Problema Específico (Nicho), Inputs (Alimentação de Dados), Motor (Molho Secreto) e Output (Momento Aha!)."
       },
       {
-        title: "The First Manual Pass: Distilling Your Genius",
-        content: "The step-by-step process of externalizing expertise into a 'Recipe Book' of rules through the Beta Client methodology."
+        title: "A Primeira Passagem Manual: Destilando Seu Gênio",
+        content: "O processo passo a passo de externalizar expertise em um 'Livro de Receitas' de regras através da metodologia Cliente Beta."
       },
       {
-        title: "From Logic to 'The Engine': The 'Black Box' Stack",
-        content: "Building the three-layer automation system: Front Door (Data Ingestion), Brain (Analysis Engine), and Printer (Presentation Layer)."
+        title: "Da Lógica ao 'Motor': A Stack 'Caixa Preta'",
+        content: "Construindo o sistema de automação de três camadas: Porta da Frente (Ingestão de Dados), Cérebro (Motor de Análise) e Impressora (Camada de Apresentação)."
       },
       {
-        title: "Delivering the 'Aha! Moment': The $20k Paid Pitch",
-        content: "The masterclass meeting where consultants are paid $20,000 to pitch their $200,000 core engagement using the one-page bombshell report."
+        title: "Entregando o 'Momento Aha!': O Pitch Pago de $20k",
+        content: "A reunião masterclass onde consultores são pagos $20.000 para apresentar seu engajamento principal de $200.000 usando o relatório bombástico de uma página."
       },
       {
-        title: "Your First True Asset",
-        content: "Transitioning from expert to architect and unlocking the high-value consulting model through the 'X-Ray' machine."
+        title: "Seu Primeiro Ativo Verdadeiro",
+        content: "Transição de especialista para arquiteto e desbloqueio do modelo de consultoria de alto valor através da máquina de 'Raio-X'."
       }
     ],
     exercises: [
       {
         type: "template",
-        title: "Build Your Audit Template",
-        description: "Create your customized audit framework",
+        title: "Construa Seu Template de Auditoria",
+        description: "Crie seu framework de auditoria personalizado",
         points: 200
       }
     ]
@@ -333,69 +333,69 @@ export const chaptersData = [
   {
     id: 7,
     number: "07",
-    title: "The Human Multiplier",
-    subtitle: "Why Communication is Everything",
+    title: "O Multiplicador Humano",
+    subtitle: "Por Que Comunicação É Tudo",
     icon: "fa-comments",
     color: "from-indigo-600 to-indigo-400",
     duration: "45 min",
     videoUrl: "https://www.loom.com/share/04b13a497f404ab0a7fef1797ab9a26e",
     keyTakeaways: [
-      "Communication beats technical ability every time",
-      "The proper verbiage for different audiences",
-      "Active listening techniques",
-      "Building trust through clarity"
+      "Comunicação supera habilidade técnica sempre",
+      "A linguagem apropriada para diferentes audiências",
+      "Técnicas de escuta ativa",
+      "Construindo confiança através de clareza"
     ],
-    overview: "Master the communication skills that separate six-figure consultants from technical implementers.",
+    overview: "Domine as habilidades de comunicação que separam consultores de seis dígitos de implementadores técnicos.",
     sections: [
       {
-        title: "The Brutal Truth",
-        content: "Why perfect technical skills mean nothing without communication ability."
+        title: "A Verdade Brutal",
+        content: "Por que habilidades técnicas perfeitas não significam nada sem capacidade de comunicação."
       },
       {
-        title: "Audience Calibration",
-        content: "Adapting your message for C-suite, managers, and technical teams."
+        title: "Calibração de Audiência",
+        content: "Adaptando sua mensagem para C-suite, gerentes e equipes técnicas."
       },
       {
-        title: "Trust Through Transparency",
-        content: "Building lasting relationships through honest, clear communication."
+        title: "Confiança Através de Transparência",
+        content: "Construindo relacionamentos duradouros através de comunicação honesta e clara."
       }
     ]
   },
   {
     id: 8,
     number: "08",
-    title: "The Chinese Menu Technique",
-    subtitle: "Packaging Services for Fortune 500",
+    title: "A Técnica do Menu Chinês",
+    subtitle: "Empacotando Serviços para Fortune 500",
     icon: "fa-list",
     color: "from-orange-600 to-orange-400",
     duration: "50 min",
     videoUrl: "https://www.loom.com/share/d7137e15b89f4e00ac76c82960d6b972",
     keyTakeaways: [
-      "The modular service packaging approach",
-      "How Fortune 500 companies buy services",
-      "'Light version of 8' psychology",
-      "Creating flexible, scalable offerings"
+      "A abordagem de empacotamento modular de serviços",
+      "Como empresas Fortune 500 compram serviços",
+      "Psicologia da 'versão light de 8'",
+      "Criando ofertas flexíveis e escaláveis"
     ],
-    overview: "Learn the sophisticated packaging technique that Fortune 500 companies expect from their vendors.",
+    overview: "Aprenda a técnica sofisticada de empacotamento que empresas Fortune 500 esperam de seus fornecedores.",
     sections: [
       {
-        title: "The Origin Story",
-        content: "How a client education led to a complete service packaging transformation."
+        title: "A História de Origem",
+        content: "Como uma educação de cliente levou a uma transformação completa no empacotamento de serviços."
       },
       {
-        title: "Menu Architecture",
-        content: "Building modular services that can be mixed and matched."
+        title: "Arquitetura de Menu",
+        content: "Construindo serviços modulares que podem ser misturados e combinados."
       },
       {
-        title: "Enterprise Psychology",
-        content: "Understanding how large organizations make purchasing decisions."
+        title: "Psicologia Corporativa",
+        content: "Entendendo como grandes organizações tomam decisões de compra."
       }
     ],
     exercises: [
       {
         type: "design",
-        title: "Create Your Service Menu",
-        description: "Design your own Chinese Menu style service offerings",
+        title: "Crie Seu Menu de Serviços",
+        description: "Projete suas próprias ofertas de serviço estilo Menu Chinês",
         points: 175
       }
     ]
@@ -403,69 +403,69 @@ export const chaptersData = [
   {
     id: 9,
     number: "09",
-    title: "The Golden Parrot",
-    subtitle: "The $300 Tuition Fee",
+    title: "O Papagaio Dourado",
+    subtitle: "A Taxa de Matrícula de $300",
     icon: "fa-graduation-cap",
     color: "from-yellow-600 to-yellow-400",
     duration: "45 min",
     videoUrl: "https://www.loom.com/share/db419f57adc14de99a2d654b01c23908",
     keyTakeaways: [
-      "Learning from mistakes and low-value engagements",
-      "The Fiverr trap and platform graduation",
-      "Extracting lessons from every interaction",
-      "Building boundaries and standards"
+      "Aprendendo com erros e engajamentos de baixo valor",
+      "A armadilha do Fiverr e graduação de plataforma",
+      "Extraindo lições de cada interação",
+      "Construindo limites e padrões"
     ],
-    overview: "Transform every client interaction, even disasters, into valuable learning experiences.",
+    overview: "Transforme cada interação com cliente, até desastres, em experiências valiosas de aprendizado.",
     sections: [
       {
-        title: "The Dominican Disaster",
-        content: "A cautionary tale of what happens when standards slip."
+        title: "O Desastre Dominicano",
+        content: "Uma história de advertência sobre o que acontece quando os padrões caem."
       },
       {
-        title: "Tuition Fee Mindset",
-        content: "Reframing failures as investments in education."
+        title: "Mentalidade de Taxa de Matrícula",
+        content: "Reenquadrando fracassos como investimentos em educação."
       },
       {
-        title: "Platform Evolution",
-        content: "Graduating from low-value platforms to premium positioning."
+        title: "Evolução de Plataforma",
+        content: "Graduando de plataformas de baixo valor para posicionamento premium."
       }
     ]
   },
   {
     id: 10,
     number: "10",
-    title: "The 11 PM Deck",
-    subtitle: "A Consultant's Cheat Code",
+    title: "A Apresentação das 23h",
+    subtitle: "O Código de Trapaça do Consultor",
     icon: "fa-clock",
     color: "from-teal-600 to-teal-400",
     duration: "55 min",
     videoUrl: "https://www.loom.com/share/6c03f2acef6f4a05a732d020033a82e0",
     keyTakeaways: [
-      "Creating client-ready workshops in under an hour",
-      "The systematic approach to rapid content creation",
-      "Leveraging AI for research and structure",
-      "Professional presentation in minimal time"
+      "Criando workshops prontos para cliente em menos de uma hora",
+      "A abordagem sistemática para criação rápida de conteúdo",
+      "Alavancando IA para pesquisa e estrutura",
+      "Apresentação profissional em tempo mínimo"
     ],
-    overview: "Master the system for creating compelling, customized workshops at lightning speed.",
+    overview: "Domine o sistema para criar workshops convincentes e personalizados em velocidade relâmpago.",
     sections: [
       {
-        title: "The Midnight Miracle",
-        content: "How to handle urgent, high-stakes requests without panic."
+        title: "O Milagre da Meia-Noite",
+        content: "Como lidar com solicitações urgentes e de alto risco sem pânico."
       },
       {
-        title: "The System",
-        content: "Step-by-step framework for rapid workshop creation."
+        title: "O Sistema",
+        content: "Framework passo a passo para criação rápida de workshop."
       },
       {
-        title: "Quality at Speed",
-        content: "Maintaining excellence while working under extreme time pressure."
+        title: "Qualidade em Velocidade",
+        content: "Mantendo excelência enquanto trabalha sob pressão extrema de tempo."
       }
     ],
     exercises: [
       {
         type: "timed",
-        title: "60-Minute Workshop Challenge",
-        description: "Create a complete workshop outline in one hour",
+        title: "Desafio de Workshop de 60 Minutos",
+        description: "Crie um esboço completo de workshop em uma hora",
         points: 250
       }
     ]
@@ -473,131 +473,131 @@ export const chaptersData = [
   {
     id: 11,
     number: "11",
-    title: "The AI 90% Don't Know",
-    subtitle: "Beyond Generative AI",
+    title: "A IA Que 90% Não Conhecem",
+    subtitle: "Além da IA Generativa",
     icon: "fa-brain",
     color: "from-pink-600 to-pink-400",
     duration: "60 min",
     videoUrl: "https://www.loom.com/share/4b29adcb768a4da9bfdf25c75532d61b",
     keyTakeaways: [
-      "Machine learning fundamentals that still matter",
-      "The difference between ML and GenAI",
-      "When to use traditional ML vs generative AI",
-      "Building credibility through deep knowledge"
+      "Fundamentos de aprendizado de máquina que ainda importam",
+      "A diferença entre ML e IA Generativa",
+      "Quando usar ML tradicional vs IA generativa",
+      "Construindo credibilidade através de conhecimento profundo"
     ],
-    overview: "Separate yourself from prompt engineers by understanding the deeper technical foundations.",
+    overview: "Separe-se dos engenheiros de prompt entendendo as fundações técnicas mais profundas.",
     sections: [
       {
-        title: "The Knowledge Gap",
-        content: "What most AI consultants don't understand about machine learning."
+        title: "A Lacuna de Conhecimento",
+        content: "O que a maioria dos consultores de IA não entende sobre aprendizado de máquina."
       },
       {
-        title: "Technical Foundations",
-        content: "Essential ML concepts every consultant should know."
+        title: "Fundações Técnicas",
+        content: "Conceitos essenciais de ML que todo consultor deveria conhecer."
       },
       {
-        title: "Application Strategy",
-        content: "Choosing the right tool for the right problem."
+        title: "Estratégia de Aplicação",
+        content: "Escolhendo a ferramenta certa para o problema certo."
       }
     ]
   },
   {
     id: 12,
     number: "12",
-    title: "The Architect and the Minefield",
-    subtitle: "Becoming Irreplaceable",
+    title: "O Arquiteto e o Campo Minado",
+    subtitle: "Tornando-se Insubstituível",
     icon: "fa-shield",
     color: "from-red-700 to-red-500",
     duration: "50 min",
     videoUrl: "https://www.loom.com/share/ca4b1379754847ada35316929620895e",
     keyTakeaways: [
-      "Navigating the overwhelming AI landscape",
-      "Becoming the calm in the client's storm",
-      "Building irreplaceable value",
-      "The FOMO antidote strategy"
+      "Navegando a paisagem esmagadora de IA",
+      "Tornando-se a calma na tempestade do cliente",
+      "Construindo valor insubstituível",
+      "A estratégia antídoto do FOMO"
     ],
-    overview: "Position yourself as the irreplaceable guide through the chaotic AI landscape.",
+    overview: "Posicione-se como o guia insubstituível através da caótica paisagem de IA.",
     sections: [
       {
-        title: "The Drowning Consultant",
-        content: "Understanding the overwhelm both you and clients face."
+        title: "O Consultor Afogado",
+        content: "Entendendo a sobrecarga que tanto você quanto os clientes enfrentam."
       },
       {
-        title: "The Architect Mindset",
-        content: "Rising above the noise to provide strategic clarity."
+        title: "A Mentalidade do Arquiteto",
+        content: "Elevando-se acima do ruído para fornecer clareza estratégica."
       },
       {
-        title: "Irreplaceable Value",
-        content: "Building relationships and expertise that can't be commoditized."
+        title: "Valor Insubstituível",
+        content: "Construindo relacionamentos e expertise que não podem ser commoditizados."
       }
     ]
   },
   {
     id: 13,
     number: "13",
-    title: "The Introvert's Playbook",
-    subtitle: "How to Get Clients to Chase You",
+    title: "O Playbook do Introvertido",
+    subtitle: "Como Fazer Clientes Te Perseguirem",
     icon: "fa-magnet",
     color: "from-purple-700 to-purple-500",
     duration: "55 min",
     videoUrl: "https://www.loom.com/share/447a4bc56af34e2585e601c5251806f6",
     keyTakeaways: [
-      "Building an inbound client system",
-      "Content strategy for introverts",
-      "The 'I hate bothering people' solution",
-      "Creating magnetic positioning"
+      "Construindo um sistema de clientes inbound",
+      "Estratégia de conteúdo para introvertidos",
+      "A solução 'Eu odeio incomodar pessoas'",
+      "Criando posicionamento magnético"
     ],
-    overview: "Build a client acquisition system that works with your personality, not against it.",
+    overview: "Construa um sistema de aquisição de clientes que funcione com sua personalidade, não contra ela.",
     sections: [
       {
-        title: "The Confession",
-        content: "Why traditional sales tactics fail for introverts."
+        title: "A Confissão",
+        content: "Por que táticas de vendas tradicionais falham para introvertidos."
       },
       {
-        title: "Inbound Architecture",
-        content: "Building systems that attract clients without cold outreach."
+        title: "Arquitetura Inbound",
+        content: "Construindo sistemas que atraem clientes sem prospecção fria."
       },
       {
-        title: "Authority Building",
-        content: "Establishing expertise that makes clients seek you out."
+        title: "Construção de Autoridade",
+        content: "Estabelecendo expertise que faz clientes te procurarem."
       }
     ]
   },
   {
     id: 14,
     number: "14",
-    title: "The Art of the Workshop",
-    subtitle: "From Boring Parrot to 3D Human",
+    title: "A Arte do Workshop",
+    subtitle: "De Papagaio Entediante a Humano 3D",
     icon: "fa-chalkboard-teacher",
     color: "from-green-700 to-green-500",
     duration: "60 min",
     videoUrl: "https://www.loom.com/share/9c99092606974ebfaa6dba9f45e90657",
     keyTakeaways: [
-      "Transforming from presenter to facilitator",
-      "The Pre-Flight Checklist system",
-      "Engaging even hostile audiences",
-      "Teaching as an acquired skill"
+      "Transformando de apresentador para facilitador",
+      "O sistema de Checklist Pré-Voo",
+      "Engajando até audiências hostis",
+      "Ensinar como uma habilidade adquirida"
     ],
-    overview: "Master the art of delivering workshops that transform skeptics into believers.",
+    overview: "Domine a arte de entregar workshops que transformam céticos em crentes.",
     sections: [
       {
-        title: "The Room of Blank Stares",
-        content: "Diagnosing and fixing engagement problems in real-time."
+        title: "A Sala de Olhares Vazios",
+        content: "Diagnosticando e corrigindo problemas de engajamento em tempo real."
       },
       {
-        title: "Pre-Flight Design",
-        content: "Systematic preparation that ensures workshop success."
+        title: "Design Pré-Voo",
+        content: "Preparação sistemática que garante sucesso do workshop."
       },
       {
-        title: "3D Human Technique",
-        content: "Moving from robotic presentation to authentic connection."
+        title: "Técnica do Humano 3D",
+        content: "Movendo de apresentação robótica para conexão autêntica."
       }
     ],
     exercises: [
       {
         type: "presentation",
-        title: "Workshop Opener Design",
-        description: "Craft your workshop opening that hooks any audience",
+        title: "Design de Abertura de Workshop",
+        description: "Crie sua abertura de workshop que fisgue qualquer audiência",
         points: 200
       }
     ]
@@ -605,112 +605,112 @@ export const chaptersData = [
   {
     id: 15,
     number: "15",
-    title: "The B2B Goldmine Community Play",
-    subtitle: "Building Sticky Ecosystems That Print Money",
+    title: "A Jogada de Comunidade Mina de Ouro B2B",
+    subtitle: "Construindo Ecossistemas Pegajosos Que Imprimem Dinheiro",
     icon: "fa-users",
     color: "from-purple-700 to-purple-500",
     duration: "33 min",
     videoUrl: "https://www.loom.com/share/4fbe7cc87e4c453085933db596f6dbc0",
     keyTakeaways: [
-      "Why 7-10 person communities beat 700-person course graveyards",
-      "The upsell/downsell ladder that prevents client churn",
-      "Retainer Light: $99/month vs $2K/month positioning psychology",
-      "The 4 hacks to build your B2B funnel ecosystem"
+      "Por que comunidades de 7-10 pessoas vencem cemitérios de cursos de 700 pessoas",
+      "A escada de upsell/downsell que previne churn de clientes",
+      "Retainer Light: psicologia de posicionamento $99/mês vs $2K/mês",
+      "Os 4 hacks para construir seu ecossistema de funil B2B"
     ],
-    overview: "Transform your consulting business from a leaky bucket into a fortified ecosystem where you never truly lose a client—you just downsell them, nurture them, and re-ascend them later.",
+    overview: "Transforme seu negócio de consultoria de um balde furado em um ecossistema fortificado onde você nunca realmente perde um cliente—você apenas faz downsell, nutre e ascende novamente depois.",
     sections: [
       {
-        title: "The $10,000-a-Month Secret",
-        content: "Why B2C AI communities are failing and the intimate B2B model that's printing money."
+        title: "O Segredo de $10.000 por Mês",
+        content: "Por que comunidades B2C de IA estão falhando e o modelo íntimo B2B que está imprimindo dinheiro."
       },
       {
-        title: "The Ecosystem Play",
-        content: "Ending the one-night stand client relationship with the upsell/downsell ladder."
+        title: "A Jogada do Ecossistema",
+        content: "Terminando o relacionamento de cliente de uma noite com a escada de upsell/downsell."
       },
       {
-        title: "Four Funnel Hacks",
-        content: "Calendly routing, reciprocity effects, QR codes, and the sawdust strategy."
+        title: "Quatro Hacks de Funil",
+        content: "Roteamento Calendly, efeitos de reciprocidade, QR codes e a estratégia da serragem."
       },
       {
-        title: "Retainer Light Design",
-        content: "Pricing psychology and the tiered ascension model that keeps clients hooked."
+        title: "Design do Retainer Light",
+        content: "Psicologia de precificação e o modelo de ascensão em camadas que mantém clientes fisgados."
       },
       {
-        title: "The 90-Day Goldmine Roadmap",
-        content: "Phase-by-phase implementation plan with scripts for every scenario."
+        title: "O Roteiro Mina de Ouro de 90 Dias",
+        content: "Plano de implementação fase por fase com scripts para cada cenário."
       }
     ],
     exercises: [
       {
         type: "assessment",
-        title: "Community Platform Audit",
-        description: "Evaluate existing B2C communities and design your B2B alternative",
+        title: "Auditoria de Plataforma de Comunidade",
+        description: "Avalie comunidades B2C existentes e projete sua alternativa B2B",
         points: 150
       },
       {
         type: "strategy",
-        title: "Ecosystem Funnel Design",
-        description: "Map out your complete upsell/downsell ladder with pricing tiers",
+        title: "Design de Funil de Ecossistema",
+        description: "Mapeie sua escada completa de upsell/downsell com níveis de preço",
         points: 200
       },
       {
         type: "writing",
-        title: "Script Library Creation",
-        description: "Write scripts for discovery calls, audits, and community transitions",
+        title: "Criação de Biblioteca de Scripts",
+        description: "Escreva scripts para chamadas de descoberta, auditorias e transições de comunidade",
         points: 175
       }
     ],
     quiz: [
       {
-        question: "What is the main problem with 700-person B2C AI communities?",
+        question: "Qual é o principal problema com comunidades B2C de IA de 700 pessoas?",
         options: [
-          "Too expensive to maintain",
-          "Impossible to scale intimacy and high churn rates",
-          "Not enough content to fill",
-          "Too hard to market"
+          "Muito caras para manter",
+          "Impossível escalar intimidade e altas taxas de churn",
+          "Não há conteúdo suficiente para preencher",
+          "Muito difícil de comercializar"
         ],
         correct: 1,
-        explanation: "The core issue is that intimacy cannot be scaled to 700+ people, leading to high churn. Knowledge is also becoming commoditized, and the market is saturated with disappointing experiences."
+        explanation: "O problema central é que intimidade não pode ser escalada para 700+ pessoas, levando a alto churn. O conhecimento também está se tornando commoditizado, e o mercado está saturado com experiências decepcionantes."
       },
       {
-        question: "What is 'Retainer Light' in the B2B community model?",
+        question: "O que é 'Retainer Light' no modelo de comunidade B2B?",
         options: [
-          "A reduced-scope consulting package",
-          "$99/month fractionalized access as a downsell protection",
-          "A free trial of consulting services",
-          "A group coaching program"
+          "Um pacote de consultoria de escopo reduzido",
+          "Acesso fracionado de $99/mês como proteção de downsell",
+          "Um teste grátis de serviços de consultoria",
+          "Um programa de coaching em grupo"
         ],
         correct: 1,
-        explanation: "Retainer Light is a $99/month tier that provides fractionalized access to your expertise, serving as downsell protection to keep clients in your ecosystem when they can't afford full retainers."
+        explanation: "Retainer Light é um nível de $99/mês que fornece acesso fracionado à sua expertise, servindo como proteção de downsell para manter clientes em seu ecossistema quando não podem pagar retainers completos."
       },
       {
-        question: "What is the 'Sawdust Strategy' for community content?",
+        question: "O que é a 'Estratégia da Serragem' para conteúdo de comunidade?",
         options: [
-          "Recycling old content into new formats",
-          "Recording yourself doing client work and sharing artifacts as community value",
-          "Breaking down complex topics into simple pieces",
-          "Using AI to generate community posts"
+          "Reciclando conteúdo antigo em novos formatos",
+          "Gravando você fazendo trabalho de cliente e compartilhando artefatos como valor da comunidade",
+          "Quebrando tópicos complexos em partes simples",
+          "Usando IA para gerar posts de comunidade"
         ],
         correct: 1,
-        explanation: "The Sawdust Strategy involves recording yourself doing actual paid client work and sharing those artifacts (the 'sawdust') with your community, providing zero-effort content that also builds a course library."
+        explanation: "A Estratégia da Serragem envolve gravar você fazendo trabalho real de cliente pago e compartilhar esses artefatos (a 'serragem') com sua comunidade, fornecendo conteúdo de esforço zero que também constrói uma biblioteca de curso."
       },
       {
-        question: "How does the Calendly routing hack capture 'almost' clients?",
+        question: "Como o hack de roteamento Calendly captura clientes 'quase'?",
         options: [
-          "By automatically booking them into cheaper calls",
-          "By tracking who visits but doesn't book due to price, then offering Retainer Light",
-          "By sending follow-up emails to all visitors",
-          "By reducing prices for hesitant prospects"
+          "Agendando-os automaticamente em chamadas mais baratas",
+          "Rastreando quem visita mas não agenda devido ao preço, então oferecendo Retainer Light",
+          "Enviando e-mails de acompanhamento para todos os visitantes",
+          "Reduzindo preços para prospects hesitantes"
         ],
         correct: 1,
-        explanation: "The hack involves checking the 'responses' tab in Calendly to see who 'did not schedule an event when presented with the booking page' (usually due to price), then personally offering them the $99/month Retainer Light community as an alternative."
+        explanation: "O hack envolve verificar a aba 'respostas' no Calendly para ver quem 'não agendou um evento quando apresentado com a página de reserva' (geralmente devido ao preço), então oferecer pessoalmente a comunidade Retainer Light de $99/mês como alternativa."
       }
     ],
-    reflection: "How can you transform your current client relationships from transactional 'one-night stands' into a sticky ecosystem? What would your three-tier community structure look like, and what specific value would you provide at each level to justify the psychological pricing shifts from 'a couple cups of coffee per month' to VIP retainer status?"
+    reflection: "Como você pode transformar seus relacionamentos atuais com clientes de 'casos de uma noite' transacionais em um ecossistema pegajoso? Como seria sua estrutura de comunidade de três níveis, e qual valor específico você forneceria em cada nível para justificar as mudanças psicológicas de preço de 'algumas xícaras de café por mês' para status de retainer VIP?"
   }
 ];
 
-// Helper functions for progress tracking
+// Funções auxiliares para rastreamento de progresso
 export const getChapterProgress = (chapterId) => {
   const stored = localStorage.getItem(`chapter_${chapterId}_progress`);
   return stored ? JSON.parse(stored) : { completed: false, sectionsRead: [], exercisesCompleted: [], quizScore: 0 };
@@ -723,18 +723,18 @@ export const updateChapterProgress = (chapterId, progressData) => {
 export const getOverallProgress = () => {
   const totalChapters = chaptersData.length;
   let completedChapters = 0;
-  
+
   chaptersData.forEach(chapter => {
     const progress = getChapterProgress(chapter.id);
     if (progress.completed) completedChapters++;
   });
-  
+
   return Math.round((completedChapters / totalChapters) * 100);
 };
 
 export const getTotalPoints = () => {
   let totalPoints = 0;
-  
+
   chaptersData.forEach(chapter => {
     const progress = getChapterProgress(chapter.id);
     if (progress.exercisesCompleted) {
@@ -744,6 +744,6 @@ export const getTotalPoints = () => {
       });
     }
   });
-  
+
   return totalPoints;
 };
