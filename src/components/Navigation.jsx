@@ -4,10 +4,10 @@ import { useTheme } from '../contexts/ThemeContext';
 
 const Navigation = ({ currentView, onNavigate, onBack, focusMode, onToggleFocus }) => {
   const { isDark, toggleTheme } = useTheme();
-  
+
   const handleExportProgress = () => {
     try {
-      // Collect all progress data
+      // Coletar todos os dados de progresso
       const exportData = {
         exportDate: new Date().toISOString(),
         overallProgress: getOverallProgress(),
@@ -28,25 +28,25 @@ const Navigation = ({ currentView, onNavigate, onBack, focusMode, onToggleFocus 
         })
       };
 
-      // Create and download JSON file
+      // Criar e baixar arquivo JSON
       const jsonString = JSON.stringify(exportData, null, 2);
       const blob = new Blob([jsonString], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
-      
+
       const link = document.createElement('a');
       link.href = url;
-      link.download = `ai-consulting-playbook-progress-${new Date().toISOString().split('T')[0]}.json`;
+      link.download = `playbook-consultoria-ia-progresso-${new Date().toISOString().split('T')[0]}.json`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       URL.revokeObjectURL(url);
-      
-      // Show success feedback (optional)
-      console.log('Progress exported successfully');
+
+      // Mostrar feedback de sucesso (opcional)
+      console.log('Progresso exportado com sucesso');
     } catch (error) {
-      console.error('Failed to export progress:', error);
-      alert('Failed to export progress. Please try again.');
+      console.error('Falha ao exportar progresso:', error);
+      alert('Falha ao exportar progresso. Por favor, tente novamente.');
     }
   };
 
@@ -57,16 +57,16 @@ const Navigation = ({ currentView, onNavigate, onBack, focusMode, onToggleFocus 
           <div className="flex items-center space-x-8">
             <div className="flex items-center space-x-3">
               <i className="fas fa-book text-2xl"></i>
-              <h1 className="text-xl font-bold">AI Consulting Playbook</h1>
+              <h1 className="text-xl font-bold">Playbook de Consultoria em IA</h1>
             </div>
 
             {currentView === 'chapter' && (
-              <button 
+              <button
                 onClick={onBack}
                 className="flex items-center space-x-2 text-silver-300 hover:text-white transition-colors"
               >
                 <i className="fas fa-arrow-left"></i>
-                <span>Back to Dashboard</span>
+                <span>Voltar ao Painel</span>
               </button>
             )}
           </div>
@@ -75,28 +75,28 @@ const Navigation = ({ currentView, onNavigate, onBack, focusMode, onToggleFocus 
             <button
               onClick={toggleTheme}
               className="px-3 py-1 rounded-lg bg-navy-700 dark:bg-gray-700 hover:bg-navy-600 dark:hover:bg-gray-600 transition-colors flex items-center space-x-2"
-              title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              title={isDark ? "Mudar para Modo Claro" : "Mudar para Modo Escuro"}
             >
               <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
-              <span className="text-sm">{isDark ? 'Light' : 'Dark'}</span>
+              <span className="text-sm">{isDark ? 'Claro' : 'Escuro'}</span>
             </button>
 
             <button
               onClick={onToggleFocus}
               className="px-3 py-1 rounded-lg bg-navy-700 dark:bg-gray-700 hover:bg-navy-600 dark:hover:bg-gray-600 transition-colors flex items-center space-x-2"
-              title={focusMode ? "Exit Focus Mode" : "Enter Focus Mode"}
+              title={focusMode ? "Sair do Modo Foco" : "Entrar no Modo Foco"}
             >
               <i className={`fas ${focusMode ? 'fa-expand' : 'fa-compress'}`}></i>
-              <span className="text-sm">{focusMode ? 'Exit' : ''} Focus Mode</span>
+              <span className="text-sm">{focusMode ? 'Sair do ' : ''} Modo Foco</span>
             </button>
 
-            <button 
+            <button
               onClick={handleExportProgress}
               className="px-3 py-1 rounded-lg bg-navy-700 dark:bg-gray-700 hover:bg-navy-600 dark:hover:bg-gray-600 transition-colors"
-              title="Export your learning progress as JSON file"
+              title="Exportar seu progresso de aprendizado como arquivo JSON"
             >
               <i className="fas fa-download mr-2"></i>
-              Export Progress
+              Exportar Progresso
             </button>
           </div>
         </div>
