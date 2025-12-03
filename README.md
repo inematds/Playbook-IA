@@ -1,89 +1,89 @@
-# AI Consulting Playbook - Interactive Learning Platform
+# AI Consulting Playbook - Plataforma de Aprendizado Interativa
 
-## Project Overview
-- **Name**: AI Consulting Playbook
-- **Goal**: Transform 14 chapters of AI consulting wisdom into an immersive, interactive learning experience
-- **Features**: 
-  - 📚 14 comprehensive chapters with structured learning paths
-  - 🎯 Interactive exercises and quizzes
-  - 📊 Progress tracking with gamification
-  - 🤖 AI Coach virtual mentor
-  - 📝 Note-taking and reflection tools
-  - 🏆 Achievement system with points and badges
-  - 📱 Responsive design with focus mode
-  - 💾 Local storage for progress persistence
+## Visão Geral do Projeto
+- **Nome**: AI Consulting Playbook
+- **Objetivo**: Transformar 15 capítulos de conhecimento em consultoria de IA em uma experiência de aprendizado imersiva e interativa
+- **Recursos**:
+  - 📚 15 capítulos abrangentes com trilhas de aprendizado estruturadas
+  - 🎯 Exercícios interativos e quizzes
+  - 📊 Acompanhamento de progresso com gamificação
+  - 🤖 AI Coach - mentor virtual
+  - 📝 Ferramentas de anotações e reflexão
+  - 🏆 Sistema de conquistas com pontos e badges
+  - 📱 Design responsivo com modo foco
+  - 💾 Armazenamento local para persistência de progresso
 
 ## URLs
-- **Live Application**: https://3000-ipxioi0x16zdyte00malr-d0b9e1e2.sandbox.novita.ai/
-- **GitHub Repository**: https://github.com/Drfiya/Playbook
+- **Aplicação Ativa**: https://3000-ipxioi0x16zdyte00malr-d0b9e1e2.sandbox.novita.ai/
+- **Repositório GitHub**: https://github.com/Drfiya/Playbook
 
-## Core Features
+## Recursos Principais
 
-### 📖 Chapter Navigation System
-- **14 Learning Modules**: Each chapter from the AI Consulting Playbook is transformed into an interactive module
-- **Progressive Unlocking**: Chapters unlock sequentially to ensure foundational knowledge
-- **Multi-Section Content**: Each chapter divided into digestible sections
-- **Key Takeaways**: Clear learning objectives for each module
+### 📖 Sistema de Navegação por Capítulos
+- **15 Módulos de Aprendizado**: Cada capítulo do AI Consulting Playbook transformado em um módulo interativo
+- **Desbloqueio Progressivo**: Capítulos desbloqueiam sequencialmente para garantir conhecimento fundamental
+- **Conteúdo Multi-Seção**: Cada capítulo dividido em seções digestíveis
+- **Principais Aprendizados**: Objetivos de aprendizado claros para cada módulo
 
-### 🎮 Interactive Learning Components
+### 🎮 Componentes de Aprendizado Interativo
 
-#### Exercises (3 Types)
-1. **Assessment Exercises**: Practice evaluating clients using frameworks
-2. **Writing Exercises**: Craft positioning statements and proposals  
-3. **Role-Play Simulations**: Practice discovery calls and presentations
+#### Exercícios (3 Tipos)
+1. **Exercícios de Avaliação**: Pratique avaliar clientes usando frameworks
+2. **Exercícios de Escrita**: Elabore declarações de posicionamento e propostas
+3. **Simulações de Role-Play**: Pratique chamadas de descoberta e apresentações
 
 #### Quizzes
-- Multiple choice questions with explanations
-- 80% passing score required for chapter completion
-- Immediate feedback with learning reinforcement
+- Questões de múltipla escolha com explicações
+- 80% de pontuação necessária para completar o capítulo
+- Feedback imediato com reforço de aprendizado
 
-#### Reflection Prompts
-- Thought-provoking questions to internalize concepts
-- Personal application scenarios
+#### Prompts de Reflexão
+- Perguntas instigantes para internalizar conceitos
+- Cenários de aplicação pessoal
 
-### 📊 Progress & Gamification
+### 📊 Progresso e Gamificação
 
-#### Progress Tracking
-- Overall course completion percentage
-- Chapter-by-chapter progress indicators
-- Section completion tracking
-- Exercise completion status
+#### Acompanhamento de Progresso
+- Porcentagem de conclusão geral do curso
+- Indicadores de progresso capítulo por capítulo
+- Rastreamento de conclusão de seções
+- Status de conclusão de exercícios
 
-#### Points & Achievements System
-- **Points**: Earn 100-250 points per exercise
-- **Badges**: 
-  - Apprentice (0-499 points)
-  - Rising Star (500-999 points)
-  - Senior Consultant (1000-1999 points)
-  - Master Consultant (2000+ points)
-- **Learning Streaks**: Track consecutive days of learning
+#### Sistema de Pontos e Conquistas
+- **Pontos**: Ganhe 100-250 pontos por exercício
+- **Badges**:
+  - Aprendiz (0-499 pontos)
+  - Estrela em Ascensão (500-999 pontos)
+  - Consultor Sênior (1000-1999 pontos)
+  - Consultor Master (2000+ pontos)
+- **Sequências de Aprendizado**: Acompanhe dias consecutivos de aprendizado
 
-### 🤖 AI Coach Virtual Mentor
-- **Context-Aware Guidance**: Provides chapter-specific tips
-- **Quick Actions**: Pre-formatted help questions
-- **Encouragement System**: Motivational messages based on progress
-- **24/7 Availability**: Always-on assistant in the corner
+### 🤖 AI Coach - Mentor Virtual
+- **Orientação Contextual**: Fornece dicas específicas por capítulo
+- **Ações Rápidas**: Perguntas de ajuda pré-formatadas
+- **Sistema de Encorajamento**: Mensagens motivacionais baseadas no progresso
+- **Disponibilidade 24/7**: Assistente sempre disponível no canto da tela
 
-### 🎯 Smart Features
+### 🎯 Recursos Inteligentes
 
-#### Focus Mode
-- Distraction-free reading environment
-- Hides sidebar and AI Coach
-- Centered content for better concentration
+#### Modo Foco
+- Ambiente de leitura sem distrações
+- Esconde barra lateral e AI Coach
+- Conteúdo centralizado para melhor concentração
 
-#### Contextual Tooltips
-- Highlight text to get definitions
-- Cross-chapter connections
-- Related concepts display
+#### Tooltips Contextuais
+- Destaque texto para obter definições
+- Conexões entre capítulos
+- Exibição de conceitos relacionados
 
-#### Export Functionality
-- Download progress summary as PDF
-- Export notes and reflections
-- Certificate of completion (when all chapters done)
+#### Funcionalidade de Exportação
+- Download do resumo de progresso como PDF
+- Exportar notas e reflexões
+- Certificado de conclusão (quando todos os capítulos forem concluídos)
 
-## Data Architecture
+## Arquitetura de Dados
 
-### Chapter Data Structure
+### Estrutura de Dados dos Capítulos
 ```javascript
 {
   id: number,
@@ -100,146 +100,145 @@
 }
 ```
 
-### Storage Services
-- **Local Storage**: Progress tracking, notes, and user preferences
-- **Session Storage**: Temporary state management
-- **IndexedDB**: (Future) Offline capability and large data storage
+### Serviços de Armazenamento
+- **Local Storage**: Acompanhamento de progresso, notas e preferências do usuário
+- **Session Storage**: Gerenciamento de estado temporário
+- **IndexedDB**: (Futuro) Capacidade offline e armazenamento de grandes dados
 
-### Progress Data Model
-- Chapter completion status
-- Sections read array
-- Exercises completed array
-- Quiz scores
-- Notes per chapter
-- Total points earned
-- Achievement unlocks
+### Modelo de Dados de Progresso
+- Status de conclusão do capítulo
+- Array de seções lidas
+- Array de exercícios completados
+- Pontuações de quizzes
+- Notas por capítulo
+- Total de pontos ganhos
+- Conquistas desbloqueadas
 
-## User Guide
+## Guia do Usuário
 
-### Getting Started
-1. **Dashboard View**: Start at the main dashboard showing all 14 chapters
-2. **Begin Learning**: Click Chapter 1 to start your journey
-3. **Read Sections**: Work through each section systematically
-4. **Complete Exercises**: Apply concepts through interactive exercises
-5. **Take Quizzes**: Test your knowledge with chapter quizzes
-6. **Track Progress**: Monitor your advancement via the sidebar tracker
+### Começando
+1. **Visão do Dashboard**: Comece no dashboard principal mostrando todos os 15 capítulos
+2. **Inicie o Aprendizado**: Clique no Capítulo 1 para iniciar sua jornada
+3. **Leia as Seções**: Trabalhe em cada seção sistematicamente
+4. **Complete os Exercícios**: Aplique conceitos através de exercícios interativos
+5. **Faça os Quizzes**: Teste seu conhecimento com quizzes de capítulo
+6. **Acompanhe o Progresso**: Monitore seu avanço através do rastreador na barra lateral
 
-### Navigation Tips
-- Use **Focus Mode** for distraction-free reading
-- Click the **AI Coach** icon for instant help
-- **Bookmark** important sections for later review
-- Use **keyboard shortcuts** (coming soon):
-  - `Space` - Next section
-  - `Shift+Space` - Previous section
-  - `F` - Toggle focus mode
+### Dicas de Navegação
+- Use o **Modo Foco** para leitura sem distrações
+- Clique no ícone do **AI Coach** para ajuda instantânea
+- **Marque** seções importantes para revisão posterior
+- Use **atalhos de teclado** (em breve):
+  - `Space` - Próxima seção
+  - `Shift+Space` - Seção anterior
+  - `F` - Alternar modo foco
 
-### Learning Path
-1. **Foundation** (Chapters 1-3): Core positioning and discovery
-2. **Skills** (Chapters 4-7): Pricing, communication, and audits
-3. **Advanced** (Chapters 8-11): Specialized techniques and frameworks
-4. **Mastery** (Chapters 12-14): Becoming irreplaceable and scaling
+### Trilha de Aprendizado
+1. **Fundamentos** (Capítulos 1-3): Posicionamento central e descoberta
+2. **Habilidades** (Capítulos 4-7): Precificação, comunicação e auditorias
+3. **Avançado** (Capítulos 8-11): Técnicas especializadas e frameworks
+4. **Maestria** (Capítulos 12-15): Tornando-se insubstituível e escalando
 
-## Technical Stack
+## Stack Técnico
 - **Frontend**: React 18 + TypeScript
-- **Styling**: Tailwind CSS with custom theme
-- **Build Tool**: Vite
-- **State Management**: React hooks + Local Storage
-- **Icons**: Font Awesome 6
-- **Deployment**: PM2 process manager
+- **Estilização**: Tailwind CSS com tema customizado
+- **Ferramenta de Build**: Vite
+- **Gerenciamento de Estado**: React hooks + Local Storage
+- **Ícones**: Font Awesome 6
+- **Deployment**: Gerenciador de processos PM2
 
 ## Deployment
-- **Platform**: Local development server
-- **Status**: ✅ Active
+- **Plataforma**: Servidor de desenvolvimento local
+- **Status**: ✅ Ativo
 - **Tech Stack**: React + Vite + Tailwind CSS
-- **Last Updated**: November 2024
+- **Última Atualização**: Novembro 2025
 
-## Currently Completed Features ✅
-- Full 14-chapter content structure with data model
-- **Rich text content system** with markdown-style formatting
-- **Chapter 1 complete** with full extracted content (6 detailed sections)
-- Interactive dashboard with progress visualization  
-- Chapter view with multi-section navigation
-- Exercise system with 3 types of activities
-- Quiz functionality with scoring
-- Progress tracking with local storage persistence
-- AI Coach virtual assistant
-- Achievement/badge system
-- Focus mode for distraction-free learning
-- Responsive design for all devices
-- Note-taking capability per chapter
-- **Content formatting**: Bold, italic, headers, lists, callouts, checklists
+## Recursos Atualmente Completos ✅
+- Estrutura completa de conteúdo de 15 capítulos com modelo de dados
+- **Sistema de conteúdo rich text** com formatação estilo markdown
+- **Todos os 15 capítulos completos** com conteúdo completo extraído (múltiplas seções detalhadas)
+- Dashboard interativo com visualização de progresso
+- Visualização de capítulo com navegação multi-seção
+- Sistema de exercícios com 3 tipos de atividades
+- Funcionalidade de quiz com pontuação
+- Acompanhamento de progresso com persistência em local storage
+- Assistente virtual AI Coach
+- Sistema de conquistas/badges
+- Modo foco para aprendizado sem distrações
+- Design responsivo para todos os dispositivos
+- Capacidade de fazer anotações por capítulo
+- **Formatação de conteúdo**: Negrito, itálico, cabeçalhos, listas, callouts, checklists
+- **Integração de vídeo**: Vídeos Loom incorporados para cada capítulo
 
-## Features Not Yet Implemented 🚧
-- **Full content for Chapters 2-14** (structure ready, needs DOCX extraction)
-- PDF export functionality
-- Keyboard shortcuts
-- Dark mode toggle
-- Search across all content
-- Bookmarking system
-- Social sharing of achievements
-- Certificate generation
-- Backend API for cloud sync
-- Mobile app version
-- Collaborative learning features
+## Recursos Ainda Não Implementados 🚧
+- Funcionalidade de exportação PDF
+- Atalhos de teclado
+- Toggle de modo escuro
+- Busca em todo o conteúdo
+- Sistema de marcadores
+- Compartilhamento social de conquistas
+- Geração de certificados
+- API backend para sincronização na nuvem
+- Versão de aplicativo móvel
+- Recursos de aprendizado colaborativo
 
-## Recommended Next Steps 📋
-1. **Complete Chapter Content**: Extract and format full content for Chapters 2-14 (see `CONTENT_UPDATE_GUIDE.md`)
-2. **Content Enhancement**: Add tables, diagrams, and visual elements from original documents
-3. **Backend Integration**: Build API for user accounts and cloud progress sync
-4. **Advanced Analytics**: Track learning patterns and provide personalized recommendations
-5. **Community Features**: Add discussion forums or peer learning
-6. **Mobile Optimization**: Create PWA or native mobile apps
-7. **Certification System**: Implement formal certification upon course completion
-8. **Content Updates**: Regular updates with new AI consulting trends
-9. **Integration**: Connect with real consulting tools and platforms
+## Próximos Passos Recomendados 📋
+1. **Aprimoramento de Conteúdo**: Adicionar tabelas, diagramas e elementos visuais dos documentos originais
+2. **Integração Backend**: Construir API para contas de usuário e sincronização de progresso na nuvem
+3. **Analytics Avançado**: Rastrear padrões de aprendizado e fornecer recomendações personalizadas
+4. **Recursos de Comunidade**: Adicionar fóruns de discussão ou aprendizado entre pares
+5. **Otimização Mobile**: Criar PWA ou aplicativos móveis nativos
+6. **Sistema de Certificação**: Implementar certificação formal ao concluir o curso
+7. **Atualizações de Conteúdo**: Atualizações regulares com novas tendências de consultoria de IA
+8. **Integração**: Conectar com ferramentas e plataformas reais de consultoria
 
-### How to Add More Content
+### Como Adicionar Mais Conteúdo
 
-The app is designed to easily accept full chapter content. See **`CONTENT_UPDATE_GUIDE.md`** for:
-- Step-by-step instructions for adding chapter content
-- Formatting guidelines for rich text
-- Content structure examples
-- Testing procedures
+A aplicação foi projetada para aceitar facilmente conteúdo completo de capítulos. Veja **`CONTENT_UPDATE_GUIDE.md`** para:
+- Instruções passo a passo para adicionar conteúdo de capítulos
+- Diretrizes de formatação para rich text
+- Exemplos de estrutura de conteúdo
+- Procedimentos de teste
 
-**Current Status**: Chapter 1 has full content (6 sections, ~13KB). Chapters 2-14 need content extraction from DOCX files.
+**Status Atual**: Todos os 15 capítulos possuem conteúdo completo extraído dos arquivos DOCX originais.
 
-## Installation & Setup
+## Instalação e Configuração
 
 ```bash
-# Clone the repository
+# Clone o repositório
 git clone [repository-url]
 
-# Install dependencies
+# Instale as dependências
 cd webapp
 npm install
 
-# Build the application
+# Faça o build da aplicação
 npm run build
 
-# Start the application
+# Inicie a aplicação
 npm run serve
 
-# Or use PM2
+# Ou use PM2
 pm2 start ecosystem.config.cjs
 ```
 
-### Configuration Notes
-- The `vite.config.js` includes `preview.allowedHosts` configuration for sandbox deployment
-- Update the allowed hosts array if deploying to different domains
-- Current configuration supports: `3000-ipxioi0x16zdyte00malr-d0b9e1e2.sandbox.novita.ai`
+### Notas de Configuração
+- O `vite.config.js` inclui configuração `preview.allowedHosts` para deployment em sandbox
+- Atualize o array de hosts permitidos se fizer deploy em domínios diferentes
+- Configuração atual suporta: `3000-ipxioi0x16zdyte00malr-d0b9e1e2.sandbox.novita.ai`
 
-## Environment Variables
-Currently no environment variables required. Future versions may need:
-- `VITE_API_URL` - Backend API endpoint
-- `VITE_AUTH_TOKEN` - Authentication token
-- `VITE_ANALYTICS_ID` - Analytics tracking ID
+## Variáveis de Ambiente
+Atualmente nenhuma variável de ambiente é necessária. Versões futuras podem precisar:
+- `VITE_API_URL` - Endpoint da API backend
+- `VITE_AUTH_TOKEN` - Token de autenticação
+- `VITE_ANALYTICS_ID` - ID de rastreamento de analytics
 
-## Contributing
-This is an educational platform designed to help consultants master AI consulting skills. Contributions for content improvements and feature enhancements are welcome.
+## Contribuindo
+Esta é uma plataforma educacional projetada para ajudar consultores a dominar habilidades de consultoria de IA. Contribuições para melhorias de conteúdo e aprimoramento de recursos são bem-vindas.
 
-## License
-Proprietary - All rights reserved
+## Licença
+Proprietário - Todos os direitos reservados
 
 ---
 
-**Built with ❤️ for AI Consultants**
+**Construído com ❤️ para Consultores de IA**

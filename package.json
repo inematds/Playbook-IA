@@ -27,7 +27,7 @@
     "wrangler": "^4.4.0"
   },
   "version": "1.0.0",
-  "description": "```txt npm install npm run dev ```",
+  "description": "Plataforma de aprendizado interativa para o AI Consulting Playbook com 15 capítulos completos",
   "main": "index.js",
   "keywords": [],
   "author": "",
