@@ -92,7 +92,7 @@ const STORAGE_KEYS = {
 export const initializeUserProgress = (userName: string): UserProgress => {
   const userId = generateUserId();
   const now = new Date().toISOString();
-  
+
   const initialProgress: UserProgress = {
     userId,
     userName,
@@ -113,10 +113,10 @@ export const initializeUserProgress = (userName: string): UserProgress => {
     achievements: [],
     totalTimeSpent: 0
   };
-  
+
   saveUserProgress(initialProgress);
   setCurrentUser(userId);
-  
+
   return initialProgress;
 };
 
@@ -127,7 +127,7 @@ export const saveUserProgress = (progress: UserProgress): void => {
     const serialized = JSON.stringify(progress);
     localStorage.setItem(`${STORAGE_KEYS.USER_PROGRESS}_${progress.userId}`, serialized);
   } catch (error) {
-    console.error('Failed to save progress:', error);
+    console.error('Falha ao salvar progresso:', error);
   }
 };
 
@@ -136,13 +136,13 @@ export const loadUserProgress = (userId?: string): UserProgress | null => {
   try {
     const id = userId || getCurrentUserId();
     if (!id) return null;
-    
+
     const serialized = localStorage.getItem(`${STORAGE_KEYS.USER_PROGRESS}_${id}`);
     if (!serialized) return null;
-    
+
     return JSON.parse(serialized);
   } catch (error) {
-    console.error('Failed to load progress:', error);
+    console.error('Falha ao carregar progresso:', error);
     return null;
   }
 };
@@ -155,26 +155,26 @@ export const updateChapterProgress = (
 ): void => {
   const progress = loadUserProgress(userId);
   if (!progress) return;
-  
+
   const chapterIndex = progress.chaptersProgress.findIndex(cp => cp.chapterId === chapterId);
   if (chapterIndex === -1) return;
-  
+
   progress.chaptersProgress[chapterIndex] = {
     ...progress.chaptersProgress[chapterIndex],
     ...updates
   };
-  
+
   // Check if chapter is completed
   if (updates.percentComplete === 100) {
     progress.chaptersProgress[chapterIndex].status = 'completed';
     progress.chaptersProgress[chapterIndex].completedAt = new Date().toISOString();
-    
+
     // Check for achievements
     checkForAchievements(progress, 'chapter-complete', chapterId);
   } else if (updates.percentComplete && updates.percentComplete > 0) {
     progress.chaptersProgress[chapterIndex].status = 'in-progress';
   }
-  
+
   saveUserProgress(progress);
 };
 
@@ -185,17 +185,17 @@ export const addCompletedExercise = (
 ): void => {
   const progress = loadUserProgress(userId);
   if (!progress) return;
-  
+
   const completed: CompletedExercise = {
     ...exercise,
     completedAt: new Date().toISOString()
   };
-  
+
   progress.exercisesCompleted.push(completed);
-  
+
   // Check for achievements
   checkForAchievements(progress, 'exercise-streak');
-  
+
   saveUserProgress(progress);
 };
 
@@ -206,19 +206,19 @@ export const addQuizResult = (
 ): void => {
   const progress = loadUserProgress(userId);
   if (!progress) return;
-  
+
   const quizResult: QuizResult = {
     ...result,
     attemptedAt: new Date().toISOString()
   };
-  
+
   progress.quizResults.push(quizResult);
-  
+
   // Check for perfect score achievement
   if (result.score === result.totalQuestions) {
     checkForAchievements(progress, 'quiz-perfect');
   }
-  
+
   saveUserProgress(progress);
 };
 
@@ -226,11 +226,11 @@ export const addQuizResult = (
 export const saveUserNote = (userId: string, note: Omit<UserNote, 'id' | 'updatedAt'>): void => {
   const progress = loadUserProgress(userId);
   if (!progress) return;
-  
+
   const existingIndex = progress.notes.findIndex(
     n => n.chapterId === note.chapterId && n.sectionId === note.sectionId
   );
-  
+
   if (existingIndex >= 0) {
     // Update existing note
     progress.notes[existingIndex] = {
@@ -247,7 +247,7 @@ export const saveUserNote = (userId: string, note: Omit<UserNote, 'id' | 'update
     };
     progress.notes.push(newNote);
   }
-  
+
   checkForAchievements(progress, 'note-taker');
   saveUserProgress(progress);
 };
@@ -256,13 +256,13 @@ export const saveUserNote = (userId: string, note: Omit<UserNote, 'id' | 'update
 export const addBookmark = (userId: string, bookmark: Omit<Bookmark, 'id' | 'createdAt'>): void => {
   const progress = loadUserProgress(userId);
   if (!progress) return;
-  
+
   const newBookmark: Bookmark = {
     ...bookmark,
     id: generateId(),
     createdAt: new Date().toISOString()
   };
-  
+
   progress.bookmarks.push(newBookmark);
   saveUserProgress(progress);
 };
@@ -271,7 +271,7 @@ export const addBookmark = (userId: string, bookmark: Omit<Bookmark, 'id' | 'cre
 export const removeBookmark = (userId: string, bookmarkId: string): void => {
   const progress = loadUserProgress(userId);
   if (!progress) return;
-  
+
   progress.bookmarks = progress.bookmarks.filter(b => b.id !== bookmarkId);
   saveUserProgress(progress);
 };
@@ -284,102 +284,102 @@ const checkForAchievements = (
 ): void => {
   const achievements = progress.achievements;
   const now = new Date().toISOString();
-  
+
   switch (achievementType) {
     case 'chapter-complete':
       const completedCount = progress.chaptersProgress.filter(cp => cp.status === 'completed').length;
-      
+
       if (completedCount === 1 && !hasAchievement(achievements, 'first-chapter')) {
         progress.achievements.push({
           id: 'first-chapter',
           type: 'chapter-complete',
-          title: 'First Steps',
-          description: 'Completed your first chapter',
+          title: 'Primeiros Passos',
+          description: 'Completou seu primeiro capítulo',
           earnedAt: now,
           icon: '🎯',
           rarity: 'common'
         });
       }
-      
+
       if (completedCount === 8 && !hasAchievement(achievements, 'halfway')) {
         progress.achievements.push({
           id: 'halfway',
           type: 'chapter-complete',
-          title: 'Halfway There',
-          description: 'Completed half of all chapters',
+          title: 'Metade do Caminho',
+          description: 'Completou metade de todos os capítulos',
           earnedAt: now,
           icon: '🌟',
           rarity: 'rare'
         });
       }
-      
+
       if (completedCount === 15 && !hasAchievement(achievements, 'master')) {
         progress.achievements.push({
           id: 'master',
           type: 'chapter-complete',
-          title: 'AI Consulting Master',
-          description: 'Completed all 15 chapters',
+          title: 'Mestre em Consultoria de IA',
+          description: 'Completou todos os 15 capítulos',
           earnedAt: now,
           icon: '👑',
           rarity: 'legendary'
         });
       }
       break;
-      
+
     case 'exercise-streak':
       const recentExercises = progress.exercisesCompleted.filter(e => {
         const daysAgo = (Date.now() - new Date(e.completedAt).getTime()) / (1000 * 60 * 60 * 24);
         return daysAgo <= 7;
       });
-      
+
       if (recentExercises.length >= 5 && !hasAchievement(achievements, 'practice-makes-perfect')) {
         progress.achievements.push({
           id: 'practice-makes-perfect',
           type: 'exercise-streak',
-          title: 'Practice Makes Perfect',
-          description: 'Completed 5 exercises in a week',
+          title: 'A Prática Leva à Perfeição',
+          description: 'Completou 5 exercícios em uma semana',
           earnedAt: now,
           icon: '💪',
           rarity: 'rare'
         });
       }
       break;
-      
+
     case 'quiz-perfect':
       const perfectScores = progress.quizResults.filter(r => r.score === r.totalQuestions).length;
-      
+
       if (perfectScores === 1 && !hasAchievement(achievements, 'perfect-score')) {
         progress.achievements.push({
           id: 'perfect-score',
           type: 'quiz-perfect',
-          title: 'Perfect Score',
-          description: 'Achieved 100% on a quiz',
+          title: 'Pontuação Perfeita',
+          description: 'Atingiu 100% em um quiz',
           earnedAt: now,
           icon: '💯',
           rarity: 'common'
         });
       }
-      
+
       if (perfectScores >= 10 && !hasAchievement(achievements, 'quiz-master')) {
         progress.achievements.push({
           id: 'quiz-master',
           type: 'quiz-perfect',
-          title: 'Quiz Master',
-          description: '10 perfect quiz scores',
+          title: 'Mestre dos Quizzes',
+          description: '10 pontuações perfeitas em quizzes',
           earnedAt: now,
           icon: '🏆',
           rarity: 'epic'
         });
       }
       break;
-      
+
     case 'note-taker':
       if (progress.notes.length >= 20 && !hasAchievement(achievements, 'avid-note-taker')) {
         progress.achievements.push({
           id: 'avid-note-taker',
           type: 'note-taker',
-          title: 'Avid Note Taker',
-          description: 'Created 20 or more notes',
+          title: 'Anotador Ávido',
+          description: 'Criou 20 ou mais anotações',
           earnedAt: now,
           icon: '📝',
           rarity: 'rare'
@@ -415,7 +415,7 @@ export const getCurrentUserId = (): string | null => {
 export const exportProgress = (userId: string): string | null => {
   const progress = loadUserProgress(userId);
   if (!progress) return null;
-  
+
   return JSON.stringify(progress, null, 2);
 };
 
@@ -427,7 +427,7 @@ export const importProgress = (jsonData: string): boolean => {
     setCurrentUser(progress.userId);
     return true;
   } catch (error) {
-    console.error('Failed to import progress:', error);
+    console.error('Falha ao importar progresso:', error);
     return false;
   }
 };
@@ -450,7 +450,7 @@ export const getLearningInsights = (progress: UserProgress): {
   const totalTime = progress.chaptersProgress.reduce((sum, cp) => sum + cp.timeSpent, 0);
   const completedChapters = progress.chaptersProgress.filter(cp => cp.status === 'completed');
   const avgChapterTime = completedChapters.length > 0 ? totalTime / completedChapters.length : 0;
-  
+
   // Find strongest chapter based on quiz scores
   const chapterScores = new Map<string, { total: number; count: number }>();
   progress.quizResults.forEach(result => {
@@ -460,7 +460,7 @@ export const getLearningInsights = (progress: UserProgress): {
       count: current.count + 1
     });
   });
-  
+
   let strongestChapter: string | null = null;
   let highestAvg = 0;
   chapterScores.forEach((scores, chapterId) => {
@@ -470,12 +470,12 @@ export const getLearningInsights = (progress: UserProgress): {
       strongestChapter = chapterId;
     }
   });
-  
+
   // Calculate average quiz score
   const avgQuizScore = progress.quizResults.length > 0
     ? progress.quizResults.reduce((sum, r) => sum + (r.score / r.totalQuestions) * 100, 0) / progress.quizResults.length
     : 0;
-  
+
   // Calculate current learning streak
   const today = new Date();
   let streak = 0;
@@ -483,22 +483,22 @@ export const getLearningInsights = (progress: UserProgress): {
     const date = new Date(today);
     date.setDate(date.getDate() - i);
     const dateStr = date.toISOString().split('T')[0];
-    
-    const hasActivity = progress.chaptersProgress.some(cp => 
+
+    const hasActivity = progress.chaptersProgress.some(cp =>
       cp.startedAt && cp.startedAt.startsWith(dateStr)
-    ) || progress.exercisesCompleted.some(e => 
+    ) || progress.exercisesCompleted.some(e =>
       e.completedAt.startsWith(dateStr)
-    ) || progress.quizResults.some(q => 
+    ) || progress.quizResults.some(q =>
       q.attemptedAt.startsWith(dateStr)
     );
-    
+
     if (hasActivity) {
       streak++;
     } else if (i > 0) {
       break;
     }
   }
-  
+
   return {
     totalTimeSpent: totalTime,
     averageChapterTime: avgChapterTime,
